@@ -1,4 +1,4 @@
-package com.github.diegogomesaraujo.grpc.services;
+package com.github.diegogomesaraujo.gretter.grpc.services;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 import static io.grpc.stub.ClientCalls.asyncUnaryCall;
@@ -19,30 +19,30 @@ public final class GreeterGrpc {
   public static final String SERVICE_NAME = "helloworld.Greeter";
 
   // Static method descriptors that strictly reflect the proto.
-  private static volatile io.grpc.MethodDescriptor<com.github.diegogomesaraujo.grpc.services.HelloRequest,
-      com.github.diegogomesaraujo.grpc.services.HelloReply> getSayHelloMethod;
+  private static volatile io.grpc.MethodDescriptor<com.github.diegogomesaraujo.gretter.grpc.services.HelloRequest,
+      com.github.diegogomesaraujo.gretter.grpc.services.HelloReply> getSayHelloMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "SayHello",
-      requestType = com.github.diegogomesaraujo.grpc.services.HelloRequest.class,
-      responseType = com.github.diegogomesaraujo.grpc.services.HelloReply.class,
+      requestType = com.github.diegogomesaraujo.gretter.grpc.services.HelloRequest.class,
+      responseType = com.github.diegogomesaraujo.gretter.grpc.services.HelloReply.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.github.diegogomesaraujo.grpc.services.HelloRequest,
-      com.github.diegogomesaraujo.grpc.services.HelloReply> getSayHelloMethod() {
-    io.grpc.MethodDescriptor<com.github.diegogomesaraujo.grpc.services.HelloRequest, com.github.diegogomesaraujo.grpc.services.HelloReply> getSayHelloMethod;
+  public static io.grpc.MethodDescriptor<com.github.diegogomesaraujo.gretter.grpc.services.HelloRequest,
+      com.github.diegogomesaraujo.gretter.grpc.services.HelloReply> getSayHelloMethod() {
+    io.grpc.MethodDescriptor<com.github.diegogomesaraujo.gretter.grpc.services.HelloRequest, com.github.diegogomesaraujo.gretter.grpc.services.HelloReply> getSayHelloMethod;
     if ((getSayHelloMethod = GreeterGrpc.getSayHelloMethod) == null) {
       synchronized (GreeterGrpc.class) {
         if ((getSayHelloMethod = GreeterGrpc.getSayHelloMethod) == null) {
           GreeterGrpc.getSayHelloMethod = getSayHelloMethod = 
-              io.grpc.MethodDescriptor.<com.github.diegogomesaraujo.grpc.services.HelloRequest, com.github.diegogomesaraujo.grpc.services.HelloReply>newBuilder()
+              io.grpc.MethodDescriptor.<com.github.diegogomesaraujo.gretter.grpc.services.HelloRequest, com.github.diegogomesaraujo.gretter.grpc.services.HelloReply>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(
                   "helloworld.Greeter", "SayHello"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.github.diegogomesaraujo.grpc.services.HelloRequest.getDefaultInstance()))
+                  com.github.diegogomesaraujo.gretter.grpc.services.HelloRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.github.diegogomesaraujo.grpc.services.HelloReply.getDefaultInstance()))
+                  com.github.diegogomesaraujo.gretter.grpc.services.HelloReply.getDefaultInstance()))
                   .setSchemaDescriptor(new GreeterMethodDescriptorSupplier("SayHello"))
                   .build();
           }
@@ -80,8 +80,8 @@ public final class GreeterGrpc {
 
     /**
      */
-    public void sayHello(com.github.diegogomesaraujo.grpc.services.HelloRequest request,
-        io.grpc.stub.StreamObserver<com.github.diegogomesaraujo.grpc.services.HelloReply> responseObserver) {
+    public void sayHello(com.github.diegogomesaraujo.gretter.grpc.services.HelloRequest request,
+        io.grpc.stub.StreamObserver<com.github.diegogomesaraujo.gretter.grpc.services.HelloReply> responseObserver) {
       asyncUnimplementedUnaryCall(getSayHelloMethod(), responseObserver);
     }
 
@@ -91,8 +91,8 @@ public final class GreeterGrpc {
             getSayHelloMethod(),
             asyncUnaryCall(
               new MethodHandlers<
-                com.github.diegogomesaraujo.grpc.services.HelloRequest,
-                com.github.diegogomesaraujo.grpc.services.HelloReply>(
+                com.github.diegogomesaraujo.gretter.grpc.services.HelloRequest,
+                com.github.diegogomesaraujo.gretter.grpc.services.HelloReply>(
                   this, METHODID_SAY_HELLO)))
           .build();
     }
@@ -118,8 +118,8 @@ public final class GreeterGrpc {
 
     /**
      */
-    public void sayHello(com.github.diegogomesaraujo.grpc.services.HelloRequest request,
-        io.grpc.stub.StreamObserver<com.github.diegogomesaraujo.grpc.services.HelloReply> responseObserver) {
+    public void sayHello(com.github.diegogomesaraujo.gretter.grpc.services.HelloRequest request,
+        io.grpc.stub.StreamObserver<com.github.diegogomesaraujo.gretter.grpc.services.HelloReply> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getSayHelloMethod(), getCallOptions()), request, responseObserver);
     }
@@ -145,7 +145,7 @@ public final class GreeterGrpc {
 
     /**
      */
-    public com.github.diegogomesaraujo.grpc.services.HelloReply sayHello(com.github.diegogomesaraujo.grpc.services.HelloRequest request) {
+    public com.github.diegogomesaraujo.gretter.grpc.services.HelloReply sayHello(com.github.diegogomesaraujo.gretter.grpc.services.HelloRequest request) {
       return blockingUnaryCall(
           getChannel(), getSayHelloMethod(), getCallOptions(), request);
     }
@@ -171,8 +171,8 @@ public final class GreeterGrpc {
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.github.diegogomesaraujo.grpc.services.HelloReply> sayHello(
-        com.github.diegogomesaraujo.grpc.services.HelloRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.github.diegogomesaraujo.gretter.grpc.services.HelloReply> sayHello(
+        com.github.diegogomesaraujo.gretter.grpc.services.HelloRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getSayHelloMethod(), getCallOptions()), request);
     }
@@ -198,8 +198,8 @@ public final class GreeterGrpc {
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
         case METHODID_SAY_HELLO:
-          serviceImpl.sayHello((com.github.diegogomesaraujo.grpc.services.HelloRequest) request,
-              (io.grpc.stub.StreamObserver<com.github.diegogomesaraujo.grpc.services.HelloReply>) responseObserver);
+          serviceImpl.sayHello((com.github.diegogomesaraujo.gretter.grpc.services.HelloRequest) request,
+              (io.grpc.stub.StreamObserver<com.github.diegogomesaraujo.gretter.grpc.services.HelloReply>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -222,7 +222,7 @@ public final class GreeterGrpc {
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
-      return com.github.diegogomesaraujo.grpc.services.HelloWorldProto.getDescriptor();
+      return com.github.diegogomesaraujo.gretter.grpc.services.HelloWorldProto.getDescriptor();
     }
 
     @java.lang.Override
