@@ -1,26 +1,16 @@
-package com.github.diegogomesaraujo.stub;
+package com.github.diegogomesaraujo.grpc;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
 import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
 import static io.grpc.stub.ClientCalls.blockingUnaryCall;
 import static io.grpc.stub.ClientCalls.futureUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
 import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
 import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
-
-import javax.annotation.processing.Generated;
 
 /**
  */
-@Generated(
-    value = "by gRPC proto compiler (version 1.9.1)",
+@javax.annotation.Generated(
+    value = "by gRPC proto compiler (version 1.21.0)",
     comments = "Source: helloworld.proto")
 public final class GreeterGrpc {
 
@@ -29,31 +19,30 @@ public final class GreeterGrpc {
   public static final String SERVICE_NAME = "helloworld.Greeter";
 
   // Static method descriptors that strictly reflect the proto.
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getSayHelloMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<com.github.diegogomesaraujo.stub.HelloRequest,
-      com.github.diegogomesaraujo.stub.HelloReply> METHOD_SAY_HELLO = getSayHelloMethod();
+  private static volatile io.grpc.MethodDescriptor<com.github.diegogomesaraujo.grpc.HelloRequest,
+      com.github.diegogomesaraujo.grpc.HelloReply> getSayHelloMethod;
 
-  private static volatile io.grpc.MethodDescriptor<com.github.diegogomesaraujo.stub.HelloRequest,
-      com.github.diegogomesaraujo.stub.HelloReply> getSayHelloMethod;
-
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static io.grpc.MethodDescriptor<com.github.diegogomesaraujo.stub.HelloRequest,
-      com.github.diegogomesaraujo.stub.HelloReply> getSayHelloMethod() {
-    io.grpc.MethodDescriptor<com.github.diegogomesaraujo.stub.HelloRequest, com.github.diegogomesaraujo.stub.HelloReply> getSayHelloMethod;
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "SayHello",
+      requestType = com.github.diegogomesaraujo.grpc.HelloRequest.class,
+      responseType = com.github.diegogomesaraujo.grpc.HelloReply.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.github.diegogomesaraujo.grpc.HelloRequest,
+      com.github.diegogomesaraujo.grpc.HelloReply> getSayHelloMethod() {
+    io.grpc.MethodDescriptor<com.github.diegogomesaraujo.grpc.HelloRequest, com.github.diegogomesaraujo.grpc.HelloReply> getSayHelloMethod;
     if ((getSayHelloMethod = GreeterGrpc.getSayHelloMethod) == null) {
       synchronized (GreeterGrpc.class) {
         if ((getSayHelloMethod = GreeterGrpc.getSayHelloMethod) == null) {
           GreeterGrpc.getSayHelloMethod = getSayHelloMethod = 
-              io.grpc.MethodDescriptor.<com.github.diegogomesaraujo.stub.HelloRequest, com.github.diegogomesaraujo.stub.HelloReply>newBuilder()
+              io.grpc.MethodDescriptor.<com.github.diegogomesaraujo.grpc.HelloRequest, com.github.diegogomesaraujo.grpc.HelloReply>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(
                   "helloworld.Greeter", "SayHello"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.github.diegogomesaraujo.stub.HelloRequest.getDefaultInstance()))
+                  com.github.diegogomesaraujo.grpc.HelloRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.github.diegogomesaraujo.stub.HelloReply.getDefaultInstance()))
+                  com.github.diegogomesaraujo.grpc.HelloReply.getDefaultInstance()))
                   .setSchemaDescriptor(new GreeterMethodDescriptorSupplier("SayHello"))
                   .build();
           }
@@ -91,8 +80,8 @@ public final class GreeterGrpc {
 
     /**
      */
-    public void sayHello(com.github.diegogomesaraujo.stub.HelloRequest request,
-        io.grpc.stub.StreamObserver<com.github.diegogomesaraujo.stub.HelloReply> responseObserver) {
+    public void sayHello(com.github.diegogomesaraujo.grpc.HelloRequest request,
+        io.grpc.stub.StreamObserver<com.github.diegogomesaraujo.grpc.HelloReply> responseObserver) {
       asyncUnimplementedUnaryCall(getSayHelloMethod(), responseObserver);
     }
 
@@ -102,8 +91,8 @@ public final class GreeterGrpc {
             getSayHelloMethod(),
             asyncUnaryCall(
               new MethodHandlers<
-                com.github.diegogomesaraujo.stub.HelloRequest,
-                com.github.diegogomesaraujo.stub.HelloReply>(
+                com.github.diegogomesaraujo.grpc.HelloRequest,
+                com.github.diegogomesaraujo.grpc.HelloReply>(
                   this, METHODID_SAY_HELLO)))
           .build();
     }
@@ -129,8 +118,8 @@ public final class GreeterGrpc {
 
     /**
      */
-    public void sayHello(com.github.diegogomesaraujo.stub.HelloRequest request,
-        io.grpc.stub.StreamObserver<com.github.diegogomesaraujo.stub.HelloReply> responseObserver) {
+    public void sayHello(com.github.diegogomesaraujo.grpc.HelloRequest request,
+        io.grpc.stub.StreamObserver<com.github.diegogomesaraujo.grpc.HelloReply> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getSayHelloMethod(), getCallOptions()), request, responseObserver);
     }
@@ -156,7 +145,7 @@ public final class GreeterGrpc {
 
     /**
      */
-    public com.github.diegogomesaraujo.stub.HelloReply sayHello(com.github.diegogomesaraujo.stub.HelloRequest request) {
+    public com.github.diegogomesaraujo.grpc.HelloReply sayHello(com.github.diegogomesaraujo.grpc.HelloRequest request) {
       return blockingUnaryCall(
           getChannel(), getSayHelloMethod(), getCallOptions(), request);
     }
@@ -182,8 +171,8 @@ public final class GreeterGrpc {
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.github.diegogomesaraujo.stub.HelloReply> sayHello(
-        com.github.diegogomesaraujo.stub.HelloRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.github.diegogomesaraujo.grpc.HelloReply> sayHello(
+        com.github.diegogomesaraujo.grpc.HelloRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getSayHelloMethod(), getCallOptions()), request);
     }
@@ -209,8 +198,8 @@ public final class GreeterGrpc {
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
         case METHODID_SAY_HELLO:
-          serviceImpl.sayHello((com.github.diegogomesaraujo.stub.HelloRequest) request,
-              (io.grpc.stub.StreamObserver<com.github.diegogomesaraujo.stub.HelloReply>) responseObserver);
+          serviceImpl.sayHello((com.github.diegogomesaraujo.grpc.HelloRequest) request,
+              (io.grpc.stub.StreamObserver<com.github.diegogomesaraujo.grpc.HelloReply>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -218,7 +207,6 @@ public final class GreeterGrpc {
     }
 
     @java.lang.Override
-    @java.lang.SuppressWarnings("unchecked")
     public io.grpc.stub.StreamObserver<Req> invoke(
         io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
@@ -234,7 +222,7 @@ public final class GreeterGrpc {
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
-      return com.github.diegogomesaraujo.stub.HelloWorldProto.getDescriptor();
+      return com.github.diegogomesaraujo.grpc.HelloWorldProto.getDescriptor();
     }
 
     @java.lang.Override

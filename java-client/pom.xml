@@ -5,10 +5,10 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.github.diegogomesaraujo</groupId>
-	<artifactId>java-server</artifactId>
+	<artifactId>java-client</artifactId>
 	<version>1.0-SNAPSHOT</version>
 
-	<name>java-server</name>
+	<name>java-client</name>
 	<url>https://github.com/diegogomesaraujo/grpc</url>
 
 	<properties>
