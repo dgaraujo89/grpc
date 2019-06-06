@@ -1,11 +1,11 @@
-package com.github.diegogomesaraujo.gretter;
+package com.github.diegogomesaraujo.greeter;
 
 import java.util.concurrent.TimeUnit;
 
-import com.github.diegogomesaraujo.gretter.grpc.services.GreeterGrpc;
-import com.github.diegogomesaraujo.gretter.grpc.services.HelloReply;
-import com.github.diegogomesaraujo.gretter.grpc.services.HelloRequest;
-import com.github.diegogomesaraujo.gretter.grpc.services.GreeterGrpc.GreeterBlockingStub;
+import com.github.diegogomesaraujo.greeter.grpc.GreeterGrpc;
+import com.github.diegogomesaraujo.greeter.grpc.GreeterGrpc.GreeterBlockingStub;
+import com.github.diegogomesaraujo.greeter.grpc.HelloReply;
+import com.github.diegogomesaraujo.greeter.grpc.HelloRequest;
 
 import io.grpc.ManagedChannel;
 import io.grpc.ManagedChannelBuilder;

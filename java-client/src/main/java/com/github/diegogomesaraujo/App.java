@@ -1,6 +1,6 @@
 package com.github.diegogomesaraujo;
 
-import com.github.diegogomesaraujo.gretter.GreeterClient;
+import com.github.diegogomesaraujo.greeter.GreeterClient;
 
 public class App {
 	
