@@ -22,7 +22,9 @@ public class PeopleClient {
 	private PeopleServiceBlockingStub blockingStub;
 	
 	public PeopleClient(String host, Integer port) {
-		channel = ManagedChannelBuilder.forAddress(host, port).build();
+		channel = ManagedChannelBuilder.forAddress(host, port)
+				.usePlaintext()
+				.build();
 		
 		blockingStub = PeopleServiceGrpc.newBlockingStub(channel);
 	}

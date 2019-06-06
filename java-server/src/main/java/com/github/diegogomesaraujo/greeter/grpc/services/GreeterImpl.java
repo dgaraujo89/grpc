@@ -15,8 +15,6 @@ public class GreeterImpl extends GreeterImplBase {
 					.setMessage("Hello "+ request.getName())
 				.build();
 		
-		System.out.println("SayHello service was called");
-		
 		responseObserver.onNext(reply);
 		responseObserver.onCompleted();
 	}
