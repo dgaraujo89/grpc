@@ -1,8 +1,8 @@
-package com.github.diegogomesaraujo.grpc.services;
+package com.github.diegogomesaraujo.greeter.grpc.services;
 
-import com.github.diegogomesaraujo.grpc.HelloReply;
-import com.github.diegogomesaraujo.grpc.HelloRequest;
-import com.github.diegogomesaraujo.grpc.GreeterGrpc.GreeterImplBase;
+import com.github.diegogomesaraujo.greeter.grpc.GreeterGrpc.GreeterImplBase;
+import com.github.diegogomesaraujo.greeter.grpc.HelloReply;
+import com.github.diegogomesaraujo.greeter.grpc.HelloRequest;
 
 import io.grpc.stub.StreamObserver;
 

@@ -1,0 +1,43 @@
+
+syntax = "proto3";
+
+import "google/protobuf/empty.proto";
+
+option java_multiple_files = true;
+option java_outer_classname = "People";
+option optimize_for = SPEED;
+
+package com.github.diegogomesaraujo.people.grpc;
+
+message Response {
+	string message = 1;
+}
+
+enum PhoneType {
+	MOBILE = 0;
+	HOME = 1;
+	WORK = 2;
+}
+
+message Phone {
+	PhoneType type = 1;
+	string number = 2;
+}
+
+message Person {
+	int64 id = 1;
+	string name = 2;
+	int32 age = 3; 
+	string email = 4;
+	repeated Phone phones = 5;
+}
+
+message PersonPhones {
+	repeated Phone phones = 1;
+}
+
+service PeopleService {
+	rpc SendPerson(Person) returns (Response) {}
+	rpc ListPeople(google.protobuf.Empty) returns (Person) {}
+	rpc ListPhonesByPerson(Person) returns (PersonPhones) {}
+}
