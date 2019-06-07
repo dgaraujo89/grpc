@@ -1,0 +1,45 @@
+
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_outer_classname = "Store";
+option optimize_for = SPEED;
+
+import "google/protobuf/empty.proto";
+
+package com.github.diegogomesaraujo.store.grpc;
+
+message Product {
+    int64 id = 1;
+    string name = 2;
+    string description = 3;
+    string price = 4;
+}
+
+message Cart {
+    repeated Product products = 1;
+}
+
+// Requests
+message ProductRequest {
+    int32 page = 1;
+    int32 size = 2;
+    int64 id = 3;
+}
+
+// Responses
+message ProductResponse {
+    repeated Product products = 1;
+}
+
+message Response {
+    string code = 1;
+    string message = 2;
+}
+
+service Shopping {
+    rpc ListProducts(ProductRequest) returns (ProductResponse) {}
+    rpc AddToCart(stream Product) returns (Cart) {}
+    rpc RemoveFromCart(Product) returns (Cart) {}
+    rpc GetCart(google.protobuf.Empty) returns (Cart) {}
+}
