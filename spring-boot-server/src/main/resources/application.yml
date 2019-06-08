@@ -1,3 +1,7 @@
 
 grpc:
   port: 9999
+  
+spring:  data:    mongodb:      database: shopping
+        redis:    host: localhost
+    port: 6379

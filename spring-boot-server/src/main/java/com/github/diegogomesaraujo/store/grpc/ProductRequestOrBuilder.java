@@ -18,7 +18,12 @@ public interface ProductRequestOrBuilder extends
   int getSize();
 
   /**
-   * <code>int64 id = 3;</code>
+   * <code>string id = 3;</code>
    */
-  long getId();
+  java.lang.String getId();
+  /**
+   * <code>string id = 3;</code>
+   */
+  com.google.protobuf.ByteString
+      getIdBytes();
 }

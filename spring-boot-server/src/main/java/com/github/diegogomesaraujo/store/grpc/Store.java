@@ -50,12 +50,12 @@ public final class Store {
     java.lang.String[] descriptorData = {
       "\n\016shopping.proto\022&com.github.diegogomesa" +
       "raujo.store.grpc\032\033google/protobuf/empty." +
-      "proto\"G\n\007Product\022\n\n\002id\030\001 \001(\003\022\014\n\004name\030\002 \001" +
+      "proto\"G\n\007Product\022\n\n\002id\030\001 \001(\t\022\014\n\004name\030\002 \001" +
       "(\t\022\023\n\013description\030\003 \001(\t\022\r\n\005price\030\004 \001(\t\"I" +
       "\n\004Cart\022A\n\010products\030\001 \003(\0132/.com.github.di" +
       "egogomesaraujo.store.grpc.Product\"8\n\016Pro" +
       "ductRequest\022\014\n\004page\030\001 \001(\005\022\014\n\004size\030\002 \001(\005\022" +
-      "\n\n\002id\030\003 \001(\003\"T\n\017ProductResponse\022A\n\010produc" +
+      "\n\n\002id\030\003 \001(\t\"T\n\017ProductResponse\022A\n\010produc" +
       "ts\030\001 \003(\0132/.com.github.diegogomesaraujo.s" +
       "tore.grpc.Product\")\n\010Response\022\014\n\004code\030\001 " +
       "\001(\t\022\017\n\007message\030\002 \001(\t2\304\003\n\010Shopping\022\201\001\n\014Li" +
@@ -69,8 +69,17 @@ public final class Store {
       "raujo.store.grpc.Product\032,.com.github.di" +
       "egogomesaraujo.store.grpc.Cart\"\000\022Q\n\007GetC" +
       "art\022\026.google.protobuf.Empty\032,.com.github" +
-      ".diegogomesaraujo.store.grpc.Cart\"\000B\013B\005S" +
-      "toreH\001P\001b\006proto3"
+      ".diegogomesaraujo.store.grpc.Cart\"\0002\360\002\n\014" +
+      "StoreService\022t\n\rCreateProduct\022/.com.gith" +
+      "ub.diegogomesaraujo.store.grpc.Product\0320" +
+      ".com.github.diegogomesaraujo.store.grpc." +
+      "Response\"\000\022t\n\rUpdateProduct\022/.com.github" +
+      ".diegogomesaraujo.store.grpc.Product\0320.c" +
+      "om.github.diegogomesaraujo.store.grpc.Re" +
+      "sponse\"\000\022t\n\rDeleteProduct\022/.com.github.d" +
+      "iegogomesaraujo.store.grpc.Product\0320.com" +
+      ".github.diegogomesaraujo.store.grpc.Resp" +
+      "onse\"\000B\013B\005StoreH\001P\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

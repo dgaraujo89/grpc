@@ -10,7 +10,7 @@ import "google/protobuf/empty.proto";
 package com.github.diegogomesaraujo.store.grpc;
 
 message Product {
-    int64 id = 1;
+    string id = 1;
     string name = 2;
     string description = 3;
     string price = 4;
@@ -24,7 +24,7 @@ message Cart {
 message ProductRequest {
     int32 page = 1;
     int32 size = 2;
-    int64 id = 3;
+    string id = 3;
 }
 
 // Responses
@@ -42,4 +42,10 @@ service Shopping {
     rpc AddToCart(stream Product) returns (Cart) {}
     rpc RemoveFromCart(Product) returns (Cart) {}
     rpc GetCart(google.protobuf.Empty) returns (Cart) {}
+}
+
+service StoreService {
+	rpc CreateProduct(Product) returns (Response) {}
+	rpc UpdateProduct(Product) returns (Response) {}
+	rpc DeleteProduct(Product) returns (Response) {}
 }

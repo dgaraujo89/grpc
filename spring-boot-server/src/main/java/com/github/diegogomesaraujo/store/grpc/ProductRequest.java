@@ -22,7 +22,7 @@ private static final long serialVersionUID = 0L;
   private ProductRequest() {
     page_ = 0;
     size_ = 0;
-    id_ = 0L;
+    id_ = "";
   }
 
   @java.lang.Override
@@ -59,9 +59,10 @@ private static final long serialVersionUID = 0L;
             size_ = input.readInt32();
             break;
           }
-          case 24: {
+          case 26: {
+            java.lang.String s = input.readStringRequireUtf8();
 
-            id_ = input.readInt64();
+            id_ = s;
             break;
           }
           default: {
@@ -115,12 +116,37 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ID_FIELD_NUMBER = 3;
-  private long id_;
+  private volatile java.lang.Object id_;
   /**
-   * <code>int64 id = 3;</code>
+   * <code>string id = 3;</code>
    */
-  public long getId() {
-    return id_;
+  public java.lang.String getId() {
+    java.lang.Object ref = id_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      id_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string id = 3;</code>
+   */
+  public com.google.protobuf.ByteString
+      getIdBytes() {
+    java.lang.Object ref = id_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      id_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
   }
 
   private byte memoizedIsInitialized = -1;
@@ -143,8 +169,8 @@ private static final long serialVersionUID = 0L;
     if (size_ != 0) {
       output.writeInt32(2, size_);
     }
-    if (id_ != 0L) {
-      output.writeInt64(3, id_);
+    if (!getIdBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, id_);
     }
     unknownFields.writeTo(output);
   }
@@ -163,9 +189,8 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt32Size(2, size_);
     }
-    if (id_ != 0L) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeInt64Size(3, id_);
+    if (!getIdBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, id_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -187,8 +212,8 @@ private static final long serialVersionUID = 0L;
         == other.getPage());
     result = result && (getSize()
         == other.getSize());
-    result = result && (getId()
-        == other.getId());
+    result = result && getId()
+        .equals(other.getId());
     result = result && unknownFields.equals(other.unknownFields);
     return result;
   }
@@ -205,8 +230,7 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + SIZE_FIELD_NUMBER;
     hash = (53 * hash) + getSize();
     hash = (37 * hash) + ID_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-        getId());
+    hash = (53 * hash) + getId().hashCode();
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -348,7 +372,7 @@ private static final long serialVersionUID = 0L;
 
       size_ = 0;
 
-      id_ = 0L;
+      id_ = "";
 
       return this;
     }
@@ -433,8 +457,9 @@ private static final long serialVersionUID = 0L;
       if (other.getSize() != 0) {
         setSize(other.getSize());
       }
-      if (other.getId() != 0L) {
-        setId(other.getId());
+      if (!other.getId().isEmpty()) {
+        id_ = other.id_;
+        onChanged();
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -517,28 +542,71 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private long id_ ;
+    private java.lang.Object id_ = "";
     /**
-     * <code>int64 id = 3;</code>
+     * <code>string id = 3;</code>
      */
-    public long getId() {
-      return id_;
+    public java.lang.String getId() {
+      java.lang.Object ref = id_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        id_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
     }
     /**
-     * <code>int64 id = 3;</code>
+     * <code>string id = 3;</code>
      */
-    public Builder setId(long value) {
-      
+    public com.google.protobuf.ByteString
+        getIdBytes() {
+      java.lang.Object ref = id_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        id_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string id = 3;</code>
+     */
+    public Builder setId(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       id_ = value;
       onChanged();
       return this;
     }
     /**
-     * <code>int64 id = 3;</code>
+     * <code>string id = 3;</code>
      */
     public Builder clearId() {
       
-      id_ = 0L;
+      id_ = getDefaultInstance().getId();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string id = 3;</code>
+     */
+    public Builder setIdBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
+      id_ = value;
       onChanged();
       return this;
     }
