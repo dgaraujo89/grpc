@@ -1,7 +1,10 @@
 package com.github.diegogomesaraujo.store.grpc.services;
 
 import org.lognet.springboot.grpc.GRpcService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.RedisTemplate;
 
+import com.github.diegogomesaraujo.repositories.ProductRepository;
 import com.github.diegogomesaraujo.store.grpc.Cart;
 import com.github.diegogomesaraujo.store.grpc.Product;
 import com.github.diegogomesaraujo.store.grpc.ProductRequest;
@@ -13,6 +16,12 @@ import io.grpc.stub.StreamObserver;
 
 @GRpcService
 public class ShoppingService extends ShoppingImplBase {
+	
+	@Autowired
+	private RedisTemplate<Object, Object> redisTemplate;
+
+	@Autowired
+	private ProductRepository productRepository;
 	
 	@Override
 	public void listProducts(ProductRequest request, StreamObserver<ProductResponse> responseObserver) {
