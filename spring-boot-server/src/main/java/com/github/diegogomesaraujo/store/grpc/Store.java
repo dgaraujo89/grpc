@@ -15,30 +15,30 @@ public final class Store {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_github_diegogomesaraujo_store_grpc_Product_descriptor;
+    internal_static_com_github_diegogomesaraujo_store_grpc_ProductRPC_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_com_github_diegogomesaraujo_store_grpc_Product_fieldAccessorTable;
+      internal_static_com_github_diegogomesaraujo_store_grpc_ProductRPC_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_github_diegogomesaraujo_store_grpc_Cart_descriptor;
+    internal_static_com_github_diegogomesaraujo_store_grpc_CartRPC_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_com_github_diegogomesaraujo_store_grpc_Cart_fieldAccessorTable;
+      internal_static_com_github_diegogomesaraujo_store_grpc_CartRPC_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_github_diegogomesaraujo_store_grpc_ProductRequest_descriptor;
+    internal_static_com_github_diegogomesaraujo_store_grpc_ProductRequestRPC_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_com_github_diegogomesaraujo_store_grpc_ProductRequest_fieldAccessorTable;
+      internal_static_com_github_diegogomesaraujo_store_grpc_ProductRequestRPC_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_github_diegogomesaraujo_store_grpc_ProductResponse_descriptor;
+    internal_static_com_github_diegogomesaraujo_store_grpc_ProductResponseRPC_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_com_github_diegogomesaraujo_store_grpc_ProductResponse_fieldAccessorTable;
+      internal_static_com_github_diegogomesaraujo_store_grpc_ProductResponseRPC_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_github_diegogomesaraujo_store_grpc_Response_descriptor;
+    internal_static_com_github_diegogomesaraujo_store_grpc_ResponseRPC_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_com_github_diegogomesaraujo_store_grpc_Response_fieldAccessorTable;
+      internal_static_com_github_diegogomesaraujo_store_grpc_ResponseRPC_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -50,36 +50,38 @@ public final class Store {
     java.lang.String[] descriptorData = {
       "\n\016shopping.proto\022&com.github.diegogomesa" +
       "raujo.store.grpc\032\033google/protobuf/empty." +
-      "proto\"G\n\007Product\022\n\n\002id\030\001 \001(\t\022\014\n\004name\030\002 \001" +
-      "(\t\022\023\n\013description\030\003 \001(\t\022\r\n\005price\030\004 \001(\t\"I" +
-      "\n\004Cart\022A\n\010products\030\001 \003(\0132/.com.github.di" +
-      "egogomesaraujo.store.grpc.Product\"8\n\016Pro" +
-      "ductRequest\022\014\n\004page\030\001 \001(\005\022\014\n\004size\030\002 \001(\005\022" +
-      "\n\n\002id\030\003 \001(\t\"T\n\017ProductResponse\022A\n\010produc" +
-      "ts\030\001 \003(\0132/.com.github.diegogomesaraujo.s" +
-      "tore.grpc.Product\")\n\010Response\022\014\n\004code\030\001 " +
-      "\001(\t\022\017\n\007message\030\002 \001(\t2\304\003\n\010Shopping\022\201\001\n\014Li" +
-      "stProducts\0226.com.github.diegogomesaraujo" +
-      ".store.grpc.ProductRequest\0327.com.github." +
-      "diegogomesaraujo.store.grpc.ProductRespo" +
-      "nse\"\000\022n\n\tAddToCart\022/.com.github.diegogom" +
-      "esaraujo.store.grpc.Product\032,.com.github" +
-      ".diegogomesaraujo.store.grpc.Cart\"\000(\001\022q\n" +
-      "\016RemoveFromCart\022/.com.github.diegogomesa" +
-      "raujo.store.grpc.Product\032,.com.github.di" +
-      "egogomesaraujo.store.grpc.Cart\"\000\022Q\n\007GetC" +
-      "art\022\026.google.protobuf.Empty\032,.com.github" +
-      ".diegogomesaraujo.store.grpc.Cart\"\0002\360\002\n\014" +
-      "StoreService\022t\n\rCreateProduct\022/.com.gith" +
-      "ub.diegogomesaraujo.store.grpc.Product\0320" +
+      "proto\"J\n\nProductRPC\022\n\n\002id\030\001 \001(\t\022\014\n\004name\030" +
+      "\002 \001(\t\022\023\n\013description\030\003 \001(\t\022\r\n\005price\030\004 \001(" +
+      "\t\"O\n\007CartRPC\022D\n\010products\030\001 \003(\01322.com.git" +
+      "hub.diegogomesaraujo.store.grpc.ProductR" +
+      "PC\";\n\021ProductRequestRPC\022\014\n\004page\030\001 \001(\005\022\014\n" +
+      "\004size\030\002 \001(\005\022\n\n\002id\030\003 \001(\t\"Z\n\022ProductRespon" +
+      "seRPC\022D\n\010products\030\001 \003(\01322.com.github.die" +
+      "gogomesaraujo.store.grpc.ProductRPC\",\n\013R" +
+      "esponseRPC\022\014\n\004code\030\001 \001(\t\022\017\n\007message\030\002 \001(" +
+      "\t2\340\003\n\017ShoppingService\022\207\001\n\014ListProducts\0229" +
       ".com.github.diegogomesaraujo.store.grpc." +
-      "Response\"\000\022t\n\rUpdateProduct\022/.com.github" +
-      ".diegogomesaraujo.store.grpc.Product\0320.c" +
-      "om.github.diegogomesaraujo.store.grpc.Re" +
-      "sponse\"\000\022t\n\rDeleteProduct\022/.com.github.d" +
-      "iegogomesaraujo.store.grpc.Product\0320.com" +
-      ".github.diegogomesaraujo.store.grpc.Resp" +
-      "onse\"\000B\013B\005StoreH\001P\001b\006proto3"
+      "ProductRequestRPC\032:.com.github.diegogome" +
+      "saraujo.store.grpc.ProductResponseRPC\"\000\022" +
+      "t\n\tAddToCart\0222.com.github.diegogomesarau" +
+      "jo.store.grpc.ProductRPC\032/.com.github.di" +
+      "egogomesaraujo.store.grpc.CartRPC\"\000(\001\022w\n" +
+      "\016RemoveFromCart\0222.com.github.diegogomesa" +
+      "raujo.store.grpc.ProductRPC\032/.com.github" +
+      ".diegogomesaraujo.store.grpc.CartRPC\"\000\022T" +
+      "\n\007GetCart\022\026.google.protobuf.Empty\032/.com." +
+      "github.diegogomesaraujo.store.grpc.CartR" +
+      "PC\"\0002\202\003\n\014StoreService\022z\n\rCreateProduct\0222" +
+      ".com.github.diegogomesaraujo.store.grpc." +
+      "ProductRPC\0323.com.github.diegogomesaraujo" +
+      ".store.grpc.ResponseRPC\"\000\022z\n\rUpdateProdu" +
+      "ct\0222.com.github.diegogomesaraujo.store.g" +
+      "rpc.ProductRPC\0323.com.github.diegogomesar" +
+      "aujo.store.grpc.ResponseRPC\"\000\022z\n\rDeleteP" +
+      "roduct\0222.com.github.diegogomesaraujo.sto" +
+      "re.grpc.ProductRPC\0323.com.github.diegogom" +
+      "esaraujo.store.grpc.ResponseRPC\"\000B\013B\005Sto" +
+      "reH\001P\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -94,35 +96,35 @@ public final class Store {
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.EmptyProto.getDescriptor(),
         }, assigner);
-    internal_static_com_github_diegogomesaraujo_store_grpc_Product_descriptor =
+    internal_static_com_github_diegogomesaraujo_store_grpc_ProductRPC_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_com_github_diegogomesaraujo_store_grpc_Product_fieldAccessorTable = new
+    internal_static_com_github_diegogomesaraujo_store_grpc_ProductRPC_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_com_github_diegogomesaraujo_store_grpc_Product_descriptor,
+        internal_static_com_github_diegogomesaraujo_store_grpc_ProductRPC_descriptor,
         new java.lang.String[] { "Id", "Name", "Description", "Price", });
-    internal_static_com_github_diegogomesaraujo_store_grpc_Cart_descriptor =
+    internal_static_com_github_diegogomesaraujo_store_grpc_CartRPC_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_com_github_diegogomesaraujo_store_grpc_Cart_fieldAccessorTable = new
+    internal_static_com_github_diegogomesaraujo_store_grpc_CartRPC_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_com_github_diegogomesaraujo_store_grpc_Cart_descriptor,
+        internal_static_com_github_diegogomesaraujo_store_grpc_CartRPC_descriptor,
         new java.lang.String[] { "Products", });
-    internal_static_com_github_diegogomesaraujo_store_grpc_ProductRequest_descriptor =
+    internal_static_com_github_diegogomesaraujo_store_grpc_ProductRequestRPC_descriptor =
       getDescriptor().getMessageTypes().get(2);
-    internal_static_com_github_diegogomesaraujo_store_grpc_ProductRequest_fieldAccessorTable = new
+    internal_static_com_github_diegogomesaraujo_store_grpc_ProductRequestRPC_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_com_github_diegogomesaraujo_store_grpc_ProductRequest_descriptor,
+        internal_static_com_github_diegogomesaraujo_store_grpc_ProductRequestRPC_descriptor,
         new java.lang.String[] { "Page", "Size", "Id", });
-    internal_static_com_github_diegogomesaraujo_store_grpc_ProductResponse_descriptor =
+    internal_static_com_github_diegogomesaraujo_store_grpc_ProductResponseRPC_descriptor =
       getDescriptor().getMessageTypes().get(3);
-    internal_static_com_github_diegogomesaraujo_store_grpc_ProductResponse_fieldAccessorTable = new
+    internal_static_com_github_diegogomesaraujo_store_grpc_ProductResponseRPC_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_com_github_diegogomesaraujo_store_grpc_ProductResponse_descriptor,
+        internal_static_com_github_diegogomesaraujo_store_grpc_ProductResponseRPC_descriptor,
         new java.lang.String[] { "Products", });
-    internal_static_com_github_diegogomesaraujo_store_grpc_Response_descriptor =
+    internal_static_com_github_diegogomesaraujo_store_grpc_ResponseRPC_descriptor =
       getDescriptor().getMessageTypes().get(4);
-    internal_static_com_github_diegogomesaraujo_store_grpc_Response_fieldAccessorTable = new
+    internal_static_com_github_diegogomesaraujo_store_grpc_ResponseRPC_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_com_github_diegogomesaraujo_store_grpc_Response_descriptor,
+        internal_static_com_github_diegogomesaraujo_store_grpc_ResponseRPC_descriptor,
         new java.lang.String[] { "Code", "Message", });
     com.google.protobuf.EmptyProto.getDescriptor();
   }

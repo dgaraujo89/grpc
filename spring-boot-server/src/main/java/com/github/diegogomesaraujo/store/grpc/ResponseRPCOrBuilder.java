@@ -3,8 +3,8 @@
 
 package com.github.diegogomesaraujo.store.grpc;
 
-public interface ResponseOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:com.github.diegogomesaraujo.store.grpc.Response)
+public interface ResponseRPCOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:com.github.diegogomesaraujo.store.grpc.ResponseRPC)
     com.google.protobuf.MessageOrBuilder {
 
   /**

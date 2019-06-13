@@ -3,8 +3,8 @@
 
 package com.github.diegogomesaraujo.store.grpc;
 
-public interface ProductOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:com.github.diegogomesaraujo.store.grpc.Product)
+public interface ProductRPCOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:com.github.diegogomesaraujo.store.grpc.ProductRPC)
     com.google.protobuf.MessageOrBuilder {
 
   /**

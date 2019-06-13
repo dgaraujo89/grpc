@@ -8,18 +8,18 @@ package com.github.diegogomesaraujo.store.grpc;
  * Requests
  * </pre>
  *
- * Protobuf type {@code com.github.diegogomesaraujo.store.grpc.ProductRequest}
+ * Protobuf type {@code com.github.diegogomesaraujo.store.grpc.ProductRequestRPC}
  */
-public  final class ProductRequest extends
+public  final class ProductRequestRPC extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:com.github.diegogomesaraujo.store.grpc.ProductRequest)
-    ProductRequestOrBuilder {
+    // @@protoc_insertion_point(message_implements:com.github.diegogomesaraujo.store.grpc.ProductRequestRPC)
+    ProductRequestRPCOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use ProductRequest.newBuilder() to construct.
-  private ProductRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use ProductRequestRPC.newBuilder() to construct.
+  private ProductRequestRPC(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private ProductRequest() {
+  private ProductRequestRPC() {
     page_ = 0;
     size_ = 0;
     id_ = "";
@@ -30,7 +30,7 @@ private static final long serialVersionUID = 0L;
   getUnknownFields() {
     return this.unknownFields;
   }
-  private ProductRequest(
+  private ProductRequestRPC(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
@@ -86,15 +86,15 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.github.diegogomesaraujo.store.grpc.Store.internal_static_com_github_diegogomesaraujo_store_grpc_ProductRequest_descriptor;
+    return com.github.diegogomesaraujo.store.grpc.Store.internal_static_com_github_diegogomesaraujo_store_grpc_ProductRequestRPC_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.github.diegogomesaraujo.store.grpc.Store.internal_static_com_github_diegogomesaraujo_store_grpc_ProductRequest_fieldAccessorTable
+    return com.github.diegogomesaraujo.store.grpc.Store.internal_static_com_github_diegogomesaraujo_store_grpc_ProductRequestRPC_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.github.diegogomesaraujo.store.grpc.ProductRequest.class, com.github.diegogomesaraujo.store.grpc.ProductRequest.Builder.class);
+            com.github.diegogomesaraujo.store.grpc.ProductRequestRPC.class, com.github.diegogomesaraujo.store.grpc.ProductRequestRPC.Builder.class);
   }
 
   public static final int PAGE_FIELD_NUMBER = 1;
@@ -202,10 +202,10 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.github.diegogomesaraujo.store.grpc.ProductRequest)) {
+    if (!(obj instanceof com.github.diegogomesaraujo.store.grpc.ProductRequestRPC)) {
       return super.equals(obj);
     }
-    com.github.diegogomesaraujo.store.grpc.ProductRequest other = (com.github.diegogomesaraujo.store.grpc.ProductRequest) obj;
+    com.github.diegogomesaraujo.store.grpc.ProductRequestRPC other = (com.github.diegogomesaraujo.store.grpc.ProductRequestRPC) obj;
 
     boolean result = true;
     result = result && (getPage()
@@ -236,69 +236,69 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static com.github.diegogomesaraujo.store.grpc.ProductRequest parseFrom(
+  public static com.github.diegogomesaraujo.store.grpc.ProductRequestRPC parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.github.diegogomesaraujo.store.grpc.ProductRequest parseFrom(
+  public static com.github.diegogomesaraujo.store.grpc.ProductRequestRPC parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.github.diegogomesaraujo.store.grpc.ProductRequest parseFrom(
+  public static com.github.diegogomesaraujo.store.grpc.ProductRequestRPC parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.github.diegogomesaraujo.store.grpc.ProductRequest parseFrom(
+  public static com.github.diegogomesaraujo.store.grpc.ProductRequestRPC parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.github.diegogomesaraujo.store.grpc.ProductRequest parseFrom(byte[] data)
+  public static com.github.diegogomesaraujo.store.grpc.ProductRequestRPC parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.github.diegogomesaraujo.store.grpc.ProductRequest parseFrom(
+  public static com.github.diegogomesaraujo.store.grpc.ProductRequestRPC parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.github.diegogomesaraujo.store.grpc.ProductRequest parseFrom(java.io.InputStream input)
+  public static com.github.diegogomesaraujo.store.grpc.ProductRequestRPC parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.github.diegogomesaraujo.store.grpc.ProductRequest parseFrom(
+  public static com.github.diegogomesaraujo.store.grpc.ProductRequestRPC parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.github.diegogomesaraujo.store.grpc.ProductRequest parseDelimitedFrom(java.io.InputStream input)
+  public static com.github.diegogomesaraujo.store.grpc.ProductRequestRPC parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-  public static com.github.diegogomesaraujo.store.grpc.ProductRequest parseDelimitedFrom(
+  public static com.github.diegogomesaraujo.store.grpc.ProductRequestRPC parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.github.diegogomesaraujo.store.grpc.ProductRequest parseFrom(
+  public static com.github.diegogomesaraujo.store.grpc.ProductRequestRPC parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.github.diegogomesaraujo.store.grpc.ProductRequest parseFrom(
+  public static com.github.diegogomesaraujo.store.grpc.ProductRequestRPC parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -311,7 +311,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.github.diegogomesaraujo.store.grpc.ProductRequest prototype) {
+  public static Builder newBuilder(com.github.diegogomesaraujo.store.grpc.ProductRequestRPC prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -331,26 +331,26 @@ private static final long serialVersionUID = 0L;
    * Requests
    * </pre>
    *
-   * Protobuf type {@code com.github.diegogomesaraujo.store.grpc.ProductRequest}
+   * Protobuf type {@code com.github.diegogomesaraujo.store.grpc.ProductRequestRPC}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:com.github.diegogomesaraujo.store.grpc.ProductRequest)
-      com.github.diegogomesaraujo.store.grpc.ProductRequestOrBuilder {
+      // @@protoc_insertion_point(builder_implements:com.github.diegogomesaraujo.store.grpc.ProductRequestRPC)
+      com.github.diegogomesaraujo.store.grpc.ProductRequestRPCOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.github.diegogomesaraujo.store.grpc.Store.internal_static_com_github_diegogomesaraujo_store_grpc_ProductRequest_descriptor;
+      return com.github.diegogomesaraujo.store.grpc.Store.internal_static_com_github_diegogomesaraujo_store_grpc_ProductRequestRPC_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.github.diegogomesaraujo.store.grpc.Store.internal_static_com_github_diegogomesaraujo_store_grpc_ProductRequest_fieldAccessorTable
+      return com.github.diegogomesaraujo.store.grpc.Store.internal_static_com_github_diegogomesaraujo_store_grpc_ProductRequestRPC_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.github.diegogomesaraujo.store.grpc.ProductRequest.class, com.github.diegogomesaraujo.store.grpc.ProductRequest.Builder.class);
+              com.github.diegogomesaraujo.store.grpc.ProductRequestRPC.class, com.github.diegogomesaraujo.store.grpc.ProductRequestRPC.Builder.class);
     }
 
-    // Construct using com.github.diegogomesaraujo.store.grpc.ProductRequest.newBuilder()
+    // Construct using com.github.diegogomesaraujo.store.grpc.ProductRequestRPC.newBuilder()
     private Builder() {
       maybeForceBuilderInitialization();
     }
@@ -380,17 +380,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.github.diegogomesaraujo.store.grpc.Store.internal_static_com_github_diegogomesaraujo_store_grpc_ProductRequest_descriptor;
+      return com.github.diegogomesaraujo.store.grpc.Store.internal_static_com_github_diegogomesaraujo_store_grpc_ProductRequestRPC_descriptor;
     }
 
     @java.lang.Override
-    public com.github.diegogomesaraujo.store.grpc.ProductRequest getDefaultInstanceForType() {
-      return com.github.diegogomesaraujo.store.grpc.ProductRequest.getDefaultInstance();
+    public com.github.diegogomesaraujo.store.grpc.ProductRequestRPC getDefaultInstanceForType() {
+      return com.github.diegogomesaraujo.store.grpc.ProductRequestRPC.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.github.diegogomesaraujo.store.grpc.ProductRequest build() {
-      com.github.diegogomesaraujo.store.grpc.ProductRequest result = buildPartial();
+    public com.github.diegogomesaraujo.store.grpc.ProductRequestRPC build() {
+      com.github.diegogomesaraujo.store.grpc.ProductRequestRPC result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -398,8 +398,8 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.github.diegogomesaraujo.store.grpc.ProductRequest buildPartial() {
-      com.github.diegogomesaraujo.store.grpc.ProductRequest result = new com.github.diegogomesaraujo.store.grpc.ProductRequest(this);
+    public com.github.diegogomesaraujo.store.grpc.ProductRequestRPC buildPartial() {
+      com.github.diegogomesaraujo.store.grpc.ProductRequestRPC result = new com.github.diegogomesaraujo.store.grpc.ProductRequestRPC(this);
       result.page_ = page_;
       result.size_ = size_;
       result.id_ = id_;
@@ -441,16 +441,16 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.github.diegogomesaraujo.store.grpc.ProductRequest) {
-        return mergeFrom((com.github.diegogomesaraujo.store.grpc.ProductRequest)other);
+      if (other instanceof com.github.diegogomesaraujo.store.grpc.ProductRequestRPC) {
+        return mergeFrom((com.github.diegogomesaraujo.store.grpc.ProductRequestRPC)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.github.diegogomesaraujo.store.grpc.ProductRequest other) {
-      if (other == com.github.diegogomesaraujo.store.grpc.ProductRequest.getDefaultInstance()) return this;
+    public Builder mergeFrom(com.github.diegogomesaraujo.store.grpc.ProductRequestRPC other) {
+      if (other == com.github.diegogomesaraujo.store.grpc.ProductRequestRPC.getDefaultInstance()) return this;
       if (other.getPage() != 0) {
         setPage(other.getPage());
       }
@@ -476,11 +476,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.github.diegogomesaraujo.store.grpc.ProductRequest parsedMessage = null;
+      com.github.diegogomesaraujo.store.grpc.ProductRequestRPC parsedMessage = null;
       try {
         parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.github.diegogomesaraujo.store.grpc.ProductRequest) e.getUnfinishedMessage();
+        parsedMessage = (com.github.diegogomesaraujo.store.grpc.ProductRequestRPC) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
         if (parsedMessage != null) {
@@ -623,41 +623,41 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:com.github.diegogomesaraujo.store.grpc.ProductRequest)
+    // @@protoc_insertion_point(builder_scope:com.github.diegogomesaraujo.store.grpc.ProductRequestRPC)
   }
 
-  // @@protoc_insertion_point(class_scope:com.github.diegogomesaraujo.store.grpc.ProductRequest)
-  private static final com.github.diegogomesaraujo.store.grpc.ProductRequest DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:com.github.diegogomesaraujo.store.grpc.ProductRequestRPC)
+  private static final com.github.diegogomesaraujo.store.grpc.ProductRequestRPC DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.github.diegogomesaraujo.store.grpc.ProductRequest();
+    DEFAULT_INSTANCE = new com.github.diegogomesaraujo.store.grpc.ProductRequestRPC();
   }
 
-  public static com.github.diegogomesaraujo.store.grpc.ProductRequest getDefaultInstance() {
+  public static com.github.diegogomesaraujo.store.grpc.ProductRequestRPC getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<ProductRequest>
-      PARSER = new com.google.protobuf.AbstractParser<ProductRequest>() {
+  private static final com.google.protobuf.Parser<ProductRequestRPC>
+      PARSER = new com.google.protobuf.AbstractParser<ProductRequestRPC>() {
     @java.lang.Override
-    public ProductRequest parsePartialFrom(
+    public ProductRequestRPC parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new ProductRequest(input, extensionRegistry);
+      return new ProductRequestRPC(input, extensionRegistry);
     }
   };
 
-  public static com.google.protobuf.Parser<ProductRequest> parser() {
+  public static com.google.protobuf.Parser<ProductRequestRPC> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<ProductRequest> getParserForType() {
+  public com.google.protobuf.Parser<ProductRequestRPC> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.github.diegogomesaraujo.store.grpc.ProductRequest getDefaultInstanceForType() {
+  public com.github.diegogomesaraujo.store.grpc.ProductRequestRPC getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

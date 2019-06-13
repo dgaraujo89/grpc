@@ -9,43 +9,43 @@ import "google/protobuf/empty.proto";
 
 package com.github.diegogomesaraujo.store.grpc;
 
-message Product {
+message ProductRPC {
     string id = 1;
     string name = 2;
     string description = 3;
     string price = 4;
 }
 
-message Cart {
-    repeated Product products = 1;
+message CartRPC {
+    repeated ProductRPC products = 1;
 }
 
 // Requests
-message ProductRequest {
+message ProductRequestRPC {
     int32 page = 1;
     int32 size = 2;
     string id = 3;
 }
 
 // Responses
-message ProductResponse {
-    repeated Product products = 1;
+message ProductResponseRPC {
+    repeated ProductRPC products = 1;
 }
 
-message Response {
+message ResponseRPC {
     string code = 1;
     string message = 2;
 }
 
-service Shopping {
-    rpc ListProducts(ProductRequest) returns (ProductResponse) {}
-    rpc AddToCart(stream Product) returns (Cart) {}
-    rpc RemoveFromCart(Product) returns (Cart) {}
-    rpc GetCart(google.protobuf.Empty) returns (Cart) {}
+service ShoppingService {
+    rpc ListProducts(ProductRequestRPC) returns (ProductResponseRPC) {}
+    rpc AddToCart(stream ProductRPC) returns (CartRPC) {}
+    rpc RemoveFromCart(ProductRPC) returns (CartRPC) {}
+    rpc GetCart(google.protobuf.Empty) returns (CartRPC) {}
 }
 
 service StoreService {
-	rpc CreateProduct(Product) returns (Response) {}
-	rpc UpdateProduct(Product) returns (Response) {}
-	rpc DeleteProduct(Product) returns (Response) {}
+	rpc CreateProduct(ProductRPC) returns (ResponseRPC) {}
+	rpc UpdateProduct(ProductRPC) returns (ResponseRPC) {}
+	rpc DeleteProduct(ProductRPC) returns (ResponseRPC) {}
 }
