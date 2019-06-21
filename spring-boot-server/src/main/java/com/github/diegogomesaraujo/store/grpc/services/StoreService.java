@@ -6,8 +6,8 @@ import org.springframework.beans.factory.annotation.Qualifier;
 
 import com.github.diegogomesaraujo.documents.Product;
 import com.github.diegogomesaraujo.repositories.ProductRepository;
+import com.github.diegogomesaraujo.store.grpc.MessageResponse;
 import com.github.diegogomesaraujo.store.grpc.ProductRPC;
-import com.github.diegogomesaraujo.store.grpc.ResponseRPC;
 import com.github.diegogomesaraujo.store.grpc.StoreServiceGrpc.StoreServiceImplBase;
 import com.github.diegogomesaraujo.store.grpc.mappers.GRPCMapper;
 
@@ -24,11 +24,10 @@ public class StoreService extends StoreServiceImplBase {
 	private GRPCMapper<ProductRPC, Product> productMapper;
 
 	@Override
-	public void createProduct(ProductRPC request, StreamObserver<ResponseRPC> responseObserver) {
+	public void createProduct(ProductRPC request, StreamObserver<MessageResponse> responseObserver) {
 		productRepository.save(productMapper.fromRpc(request));
 		
-		ResponseRPC response = ResponseRPC.newBuilder()
-				.setCode("0")
+		MessageResponse response = MessageResponse.newBuilder()
 				.setMessage("The product was created")
 				.build();
 		
@@ -37,11 +36,10 @@ public class StoreService extends StoreServiceImplBase {
 	}
 
 	@Override
-	public void updateProduct(ProductRPC request, StreamObserver<ResponseRPC> responseObserver) {
+	public void updateProduct(ProductRPC request, StreamObserver<MessageResponse> responseObserver) {
 		productRepository.save(productMapper.fromRpc(request));
 		
-		ResponseRPC response = ResponseRPC.newBuilder()
-				.setCode("0")
+		MessageResponse response = MessageResponse.newBuilder()
 				.setMessage("The product was updated")
 				.build();
 		
@@ -50,11 +48,10 @@ public class StoreService extends StoreServiceImplBase {
 	}
 
 	@Override
-	public void deleteProduct(ProductRPC request, StreamObserver<ResponseRPC> responseObserver) {
+	public void deleteProduct(ProductRPC request, StreamObserver<MessageResponse> responseObserver) {
 		productRepository.deleteById(request.getId());
 		
-		ResponseRPC response = ResponseRPC.newBuilder()
-				.setCode("0")
+		MessageResponse response = MessageResponse.newBuilder()
 				.setMessage("The product was deleted")
 				.build();
 		

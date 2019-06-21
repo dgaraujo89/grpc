@@ -28,21 +28,21 @@ public final class StoreServiceGrpc {
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<com.github.diegogomesaraujo.store.grpc.ProductRPC,
-      com.github.diegogomesaraujo.store.grpc.ResponseRPC> getCreateProductMethod;
+      com.github.diegogomesaraujo.store.grpc.MessageResponse> getCreateProductMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "CreateProduct",
       requestType = com.github.diegogomesaraujo.store.grpc.ProductRPC.class,
-      responseType = com.github.diegogomesaraujo.store.grpc.ResponseRPC.class,
+      responseType = com.github.diegogomesaraujo.store.grpc.MessageResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.github.diegogomesaraujo.store.grpc.ProductRPC,
-      com.github.diegogomesaraujo.store.grpc.ResponseRPC> getCreateProductMethod() {
-    io.grpc.MethodDescriptor<com.github.diegogomesaraujo.store.grpc.ProductRPC, com.github.diegogomesaraujo.store.grpc.ResponseRPC> getCreateProductMethod;
+      com.github.diegogomesaraujo.store.grpc.MessageResponse> getCreateProductMethod() {
+    io.grpc.MethodDescriptor<com.github.diegogomesaraujo.store.grpc.ProductRPC, com.github.diegogomesaraujo.store.grpc.MessageResponse> getCreateProductMethod;
     if ((getCreateProductMethod = StoreServiceGrpc.getCreateProductMethod) == null) {
       synchronized (StoreServiceGrpc.class) {
         if ((getCreateProductMethod = StoreServiceGrpc.getCreateProductMethod) == null) {
           StoreServiceGrpc.getCreateProductMethod = getCreateProductMethod = 
-              io.grpc.MethodDescriptor.<com.github.diegogomesaraujo.store.grpc.ProductRPC, com.github.diegogomesaraujo.store.grpc.ResponseRPC>newBuilder()
+              io.grpc.MethodDescriptor.<com.github.diegogomesaraujo.store.grpc.ProductRPC, com.github.diegogomesaraujo.store.grpc.MessageResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(
                   "com.github.diegogomesaraujo.store.grpc.StoreService", "CreateProduct"))
@@ -50,7 +50,7 @@ public final class StoreServiceGrpc {
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.github.diegogomesaraujo.store.grpc.ProductRPC.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.github.diegogomesaraujo.store.grpc.ResponseRPC.getDefaultInstance()))
+                  com.github.diegogomesaraujo.store.grpc.MessageResponse.getDefaultInstance()))
                   .setSchemaDescriptor(new StoreServiceMethodDescriptorSupplier("CreateProduct"))
                   .build();
           }
@@ -60,21 +60,21 @@ public final class StoreServiceGrpc {
   }
 
   private static volatile io.grpc.MethodDescriptor<com.github.diegogomesaraujo.store.grpc.ProductRPC,
-      com.github.diegogomesaraujo.store.grpc.ResponseRPC> getUpdateProductMethod;
+      com.github.diegogomesaraujo.store.grpc.MessageResponse> getUpdateProductMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "UpdateProduct",
       requestType = com.github.diegogomesaraujo.store.grpc.ProductRPC.class,
-      responseType = com.github.diegogomesaraujo.store.grpc.ResponseRPC.class,
+      responseType = com.github.diegogomesaraujo.store.grpc.MessageResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.github.diegogomesaraujo.store.grpc.ProductRPC,
-      com.github.diegogomesaraujo.store.grpc.ResponseRPC> getUpdateProductMethod() {
-    io.grpc.MethodDescriptor<com.github.diegogomesaraujo.store.grpc.ProductRPC, com.github.diegogomesaraujo.store.grpc.ResponseRPC> getUpdateProductMethod;
+      com.github.diegogomesaraujo.store.grpc.MessageResponse> getUpdateProductMethod() {
+    io.grpc.MethodDescriptor<com.github.diegogomesaraujo.store.grpc.ProductRPC, com.github.diegogomesaraujo.store.grpc.MessageResponse> getUpdateProductMethod;
     if ((getUpdateProductMethod = StoreServiceGrpc.getUpdateProductMethod) == null) {
       synchronized (StoreServiceGrpc.class) {
         if ((getUpdateProductMethod = StoreServiceGrpc.getUpdateProductMethod) == null) {
           StoreServiceGrpc.getUpdateProductMethod = getUpdateProductMethod = 
-              io.grpc.MethodDescriptor.<com.github.diegogomesaraujo.store.grpc.ProductRPC, com.github.diegogomesaraujo.store.grpc.ResponseRPC>newBuilder()
+              io.grpc.MethodDescriptor.<com.github.diegogomesaraujo.store.grpc.ProductRPC, com.github.diegogomesaraujo.store.grpc.MessageResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(
                   "com.github.diegogomesaraujo.store.grpc.StoreService", "UpdateProduct"))
@@ -82,7 +82,7 @@ public final class StoreServiceGrpc {
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.github.diegogomesaraujo.store.grpc.ProductRPC.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.github.diegogomesaraujo.store.grpc.ResponseRPC.getDefaultInstance()))
+                  com.github.diegogomesaraujo.store.grpc.MessageResponse.getDefaultInstance()))
                   .setSchemaDescriptor(new StoreServiceMethodDescriptorSupplier("UpdateProduct"))
                   .build();
           }
@@ -92,21 +92,21 @@ public final class StoreServiceGrpc {
   }
 
   private static volatile io.grpc.MethodDescriptor<com.github.diegogomesaraujo.store.grpc.ProductRPC,
-      com.github.diegogomesaraujo.store.grpc.ResponseRPC> getDeleteProductMethod;
+      com.github.diegogomesaraujo.store.grpc.MessageResponse> getDeleteProductMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "DeleteProduct",
       requestType = com.github.diegogomesaraujo.store.grpc.ProductRPC.class,
-      responseType = com.github.diegogomesaraujo.store.grpc.ResponseRPC.class,
+      responseType = com.github.diegogomesaraujo.store.grpc.MessageResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.github.diegogomesaraujo.store.grpc.ProductRPC,
-      com.github.diegogomesaraujo.store.grpc.ResponseRPC> getDeleteProductMethod() {
-    io.grpc.MethodDescriptor<com.github.diegogomesaraujo.store.grpc.ProductRPC, com.github.diegogomesaraujo.store.grpc.ResponseRPC> getDeleteProductMethod;
+      com.github.diegogomesaraujo.store.grpc.MessageResponse> getDeleteProductMethod() {
+    io.grpc.MethodDescriptor<com.github.diegogomesaraujo.store.grpc.ProductRPC, com.github.diegogomesaraujo.store.grpc.MessageResponse> getDeleteProductMethod;
     if ((getDeleteProductMethod = StoreServiceGrpc.getDeleteProductMethod) == null) {
       synchronized (StoreServiceGrpc.class) {
         if ((getDeleteProductMethod = StoreServiceGrpc.getDeleteProductMethod) == null) {
           StoreServiceGrpc.getDeleteProductMethod = getDeleteProductMethod = 
-              io.grpc.MethodDescriptor.<com.github.diegogomesaraujo.store.grpc.ProductRPC, com.github.diegogomesaraujo.store.grpc.ResponseRPC>newBuilder()
+              io.grpc.MethodDescriptor.<com.github.diegogomesaraujo.store.grpc.ProductRPC, com.github.diegogomesaraujo.store.grpc.MessageResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(
                   "com.github.diegogomesaraujo.store.grpc.StoreService", "DeleteProduct"))
@@ -114,7 +114,7 @@ public final class StoreServiceGrpc {
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.github.diegogomesaraujo.store.grpc.ProductRPC.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.github.diegogomesaraujo.store.grpc.ResponseRPC.getDefaultInstance()))
+                  com.github.diegogomesaraujo.store.grpc.MessageResponse.getDefaultInstance()))
                   .setSchemaDescriptor(new StoreServiceMethodDescriptorSupplier("DeleteProduct"))
                   .build();
           }
@@ -153,21 +153,21 @@ public final class StoreServiceGrpc {
     /**
      */
     public void createProduct(com.github.diegogomesaraujo.store.grpc.ProductRPC request,
-        io.grpc.stub.StreamObserver<com.github.diegogomesaraujo.store.grpc.ResponseRPC> responseObserver) {
+        io.grpc.stub.StreamObserver<com.github.diegogomesaraujo.store.grpc.MessageResponse> responseObserver) {
       asyncUnimplementedUnaryCall(getCreateProductMethod(), responseObserver);
     }
 
     /**
      */
     public void updateProduct(com.github.diegogomesaraujo.store.grpc.ProductRPC request,
-        io.grpc.stub.StreamObserver<com.github.diegogomesaraujo.store.grpc.ResponseRPC> responseObserver) {
+        io.grpc.stub.StreamObserver<com.github.diegogomesaraujo.store.grpc.MessageResponse> responseObserver) {
       asyncUnimplementedUnaryCall(getUpdateProductMethod(), responseObserver);
     }
 
     /**
      */
     public void deleteProduct(com.github.diegogomesaraujo.store.grpc.ProductRPC request,
-        io.grpc.stub.StreamObserver<com.github.diegogomesaraujo.store.grpc.ResponseRPC> responseObserver) {
+        io.grpc.stub.StreamObserver<com.github.diegogomesaraujo.store.grpc.MessageResponse> responseObserver) {
       asyncUnimplementedUnaryCall(getDeleteProductMethod(), responseObserver);
     }
 
@@ -178,21 +178,21 @@ public final class StoreServiceGrpc {
             asyncUnaryCall(
               new MethodHandlers<
                 com.github.diegogomesaraujo.store.grpc.ProductRPC,
-                com.github.diegogomesaraujo.store.grpc.ResponseRPC>(
+                com.github.diegogomesaraujo.store.grpc.MessageResponse>(
                   this, METHODID_CREATE_PRODUCT)))
           .addMethod(
             getUpdateProductMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.github.diegogomesaraujo.store.grpc.ProductRPC,
-                com.github.diegogomesaraujo.store.grpc.ResponseRPC>(
+                com.github.diegogomesaraujo.store.grpc.MessageResponse>(
                   this, METHODID_UPDATE_PRODUCT)))
           .addMethod(
             getDeleteProductMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.github.diegogomesaraujo.store.grpc.ProductRPC,
-                com.github.diegogomesaraujo.store.grpc.ResponseRPC>(
+                com.github.diegogomesaraujo.store.grpc.MessageResponse>(
                   this, METHODID_DELETE_PRODUCT)))
           .build();
     }
@@ -219,7 +219,7 @@ public final class StoreServiceGrpc {
     /**
      */
     public void createProduct(com.github.diegogomesaraujo.store.grpc.ProductRPC request,
-        io.grpc.stub.StreamObserver<com.github.diegogomesaraujo.store.grpc.ResponseRPC> responseObserver) {
+        io.grpc.stub.StreamObserver<com.github.diegogomesaraujo.store.grpc.MessageResponse> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getCreateProductMethod(), getCallOptions()), request, responseObserver);
     }
@@ -227,7 +227,7 @@ public final class StoreServiceGrpc {
     /**
      */
     public void updateProduct(com.github.diegogomesaraujo.store.grpc.ProductRPC request,
-        io.grpc.stub.StreamObserver<com.github.diegogomesaraujo.store.grpc.ResponseRPC> responseObserver) {
+        io.grpc.stub.StreamObserver<com.github.diegogomesaraujo.store.grpc.MessageResponse> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getUpdateProductMethod(), getCallOptions()), request, responseObserver);
     }
@@ -235,7 +235,7 @@ public final class StoreServiceGrpc {
     /**
      */
     public void deleteProduct(com.github.diegogomesaraujo.store.grpc.ProductRPC request,
-        io.grpc.stub.StreamObserver<com.github.diegogomesaraujo.store.grpc.ResponseRPC> responseObserver) {
+        io.grpc.stub.StreamObserver<com.github.diegogomesaraujo.store.grpc.MessageResponse> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getDeleteProductMethod(), getCallOptions()), request, responseObserver);
     }
@@ -261,21 +261,21 @@ public final class StoreServiceGrpc {
 
     /**
      */
-    public com.github.diegogomesaraujo.store.grpc.ResponseRPC createProduct(com.github.diegogomesaraujo.store.grpc.ProductRPC request) {
+    public com.github.diegogomesaraujo.store.grpc.MessageResponse createProduct(com.github.diegogomesaraujo.store.grpc.ProductRPC request) {
       return blockingUnaryCall(
           getChannel(), getCreateProductMethod(), getCallOptions(), request);
     }
 
     /**
      */
-    public com.github.diegogomesaraujo.store.grpc.ResponseRPC updateProduct(com.github.diegogomesaraujo.store.grpc.ProductRPC request) {
+    public com.github.diegogomesaraujo.store.grpc.MessageResponse updateProduct(com.github.diegogomesaraujo.store.grpc.ProductRPC request) {
       return blockingUnaryCall(
           getChannel(), getUpdateProductMethod(), getCallOptions(), request);
     }
 
     /**
      */
-    public com.github.diegogomesaraujo.store.grpc.ResponseRPC deleteProduct(com.github.diegogomesaraujo.store.grpc.ProductRPC request) {
+    public com.github.diegogomesaraujo.store.grpc.MessageResponse deleteProduct(com.github.diegogomesaraujo.store.grpc.ProductRPC request) {
       return blockingUnaryCall(
           getChannel(), getDeleteProductMethod(), getCallOptions(), request);
     }
@@ -301,7 +301,7 @@ public final class StoreServiceGrpc {
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.github.diegogomesaraujo.store.grpc.ResponseRPC> createProduct(
+    public com.google.common.util.concurrent.ListenableFuture<com.github.diegogomesaraujo.store.grpc.MessageResponse> createProduct(
         com.github.diegogomesaraujo.store.grpc.ProductRPC request) {
       return futureUnaryCall(
           getChannel().newCall(getCreateProductMethod(), getCallOptions()), request);
@@ -309,7 +309,7 @@ public final class StoreServiceGrpc {
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.github.diegogomesaraujo.store.grpc.ResponseRPC> updateProduct(
+    public com.google.common.util.concurrent.ListenableFuture<com.github.diegogomesaraujo.store.grpc.MessageResponse> updateProduct(
         com.github.diegogomesaraujo.store.grpc.ProductRPC request) {
       return futureUnaryCall(
           getChannel().newCall(getUpdateProductMethod(), getCallOptions()), request);
@@ -317,7 +317,7 @@ public final class StoreServiceGrpc {
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.github.diegogomesaraujo.store.grpc.ResponseRPC> deleteProduct(
+    public com.google.common.util.concurrent.ListenableFuture<com.github.diegogomesaraujo.store.grpc.MessageResponse> deleteProduct(
         com.github.diegogomesaraujo.store.grpc.ProductRPC request) {
       return futureUnaryCall(
           getChannel().newCall(getDeleteProductMethod(), getCallOptions()), request);
@@ -347,15 +347,15 @@ public final class StoreServiceGrpc {
       switch (methodId) {
         case METHODID_CREATE_PRODUCT:
           serviceImpl.createProduct((com.github.diegogomesaraujo.store.grpc.ProductRPC) request,
-              (io.grpc.stub.StreamObserver<com.github.diegogomesaraujo.store.grpc.ResponseRPC>) responseObserver);
+              (io.grpc.stub.StreamObserver<com.github.diegogomesaraujo.store.grpc.MessageResponse>) responseObserver);
           break;
         case METHODID_UPDATE_PRODUCT:
           serviceImpl.updateProduct((com.github.diegogomesaraujo.store.grpc.ProductRPC) request,
-              (io.grpc.stub.StreamObserver<com.github.diegogomesaraujo.store.grpc.ResponseRPC>) responseObserver);
+              (io.grpc.stub.StreamObserver<com.github.diegogomesaraujo.store.grpc.MessageResponse>) responseObserver);
           break;
         case METHODID_DELETE_PRODUCT:
           serviceImpl.deleteProduct((com.github.diegogomesaraujo.store.grpc.ProductRPC) request,
-              (io.grpc.stub.StreamObserver<com.github.diegogomesaraujo.store.grpc.ResponseRPC>) responseObserver);
+              (io.grpc.stub.StreamObserver<com.github.diegogomesaraujo.store.grpc.MessageResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();

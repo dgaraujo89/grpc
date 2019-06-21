@@ -27,30 +27,30 @@ public final class ShoppingServiceGrpc {
   public static final String SERVICE_NAME = "com.github.diegogomesaraujo.store.grpc.ShoppingService";
 
   // Static method descriptors that strictly reflect the proto.
-  private static volatile io.grpc.MethodDescriptor<com.github.diegogomesaraujo.store.grpc.ProductRequestRPC,
-      com.github.diegogomesaraujo.store.grpc.ProductResponseRPC> getListProductsMethod;
+  private static volatile io.grpc.MethodDescriptor<com.github.diegogomesaraujo.store.grpc.PaginationRequest,
+      com.github.diegogomesaraujo.store.grpc.ProductResponse> getListProductsMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "ListProducts",
-      requestType = com.github.diegogomesaraujo.store.grpc.ProductRequestRPC.class,
-      responseType = com.github.diegogomesaraujo.store.grpc.ProductResponseRPC.class,
+      requestType = com.github.diegogomesaraujo.store.grpc.PaginationRequest.class,
+      responseType = com.github.diegogomesaraujo.store.grpc.ProductResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.github.diegogomesaraujo.store.grpc.ProductRequestRPC,
-      com.github.diegogomesaraujo.store.grpc.ProductResponseRPC> getListProductsMethod() {
-    io.grpc.MethodDescriptor<com.github.diegogomesaraujo.store.grpc.ProductRequestRPC, com.github.diegogomesaraujo.store.grpc.ProductResponseRPC> getListProductsMethod;
+  public static io.grpc.MethodDescriptor<com.github.diegogomesaraujo.store.grpc.PaginationRequest,
+      com.github.diegogomesaraujo.store.grpc.ProductResponse> getListProductsMethod() {
+    io.grpc.MethodDescriptor<com.github.diegogomesaraujo.store.grpc.PaginationRequest, com.github.diegogomesaraujo.store.grpc.ProductResponse> getListProductsMethod;
     if ((getListProductsMethod = ShoppingServiceGrpc.getListProductsMethod) == null) {
       synchronized (ShoppingServiceGrpc.class) {
         if ((getListProductsMethod = ShoppingServiceGrpc.getListProductsMethod) == null) {
           ShoppingServiceGrpc.getListProductsMethod = getListProductsMethod = 
-              io.grpc.MethodDescriptor.<com.github.diegogomesaraujo.store.grpc.ProductRequestRPC, com.github.diegogomesaraujo.store.grpc.ProductResponseRPC>newBuilder()
+              io.grpc.MethodDescriptor.<com.github.diegogomesaraujo.store.grpc.PaginationRequest, com.github.diegogomesaraujo.store.grpc.ProductResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(
                   "com.github.diegogomesaraujo.store.grpc.ShoppingService", "ListProducts"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.github.diegogomesaraujo.store.grpc.ProductRequestRPC.getDefaultInstance()))
+                  com.github.diegogomesaraujo.store.grpc.PaginationRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.github.diegogomesaraujo.store.grpc.ProductResponseRPC.getDefaultInstance()))
+                  com.github.diegogomesaraujo.store.grpc.ProductResponse.getDefaultInstance()))
                   .setSchemaDescriptor(new ShoppingServiceMethodDescriptorSupplier("ListProducts"))
                   .build();
           }
@@ -59,100 +59,36 @@ public final class ShoppingServiceGrpc {
      return getListProductsMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.github.diegogomesaraujo.store.grpc.ProductRPC,
-      com.github.diegogomesaraujo.store.grpc.CartRPC> getAddToCartMethod;
+  private static volatile io.grpc.MethodDescriptor<com.github.diegogomesaraujo.store.grpc.PaymentRequest,
+      com.github.diegogomesaraujo.store.grpc.MessageResponse> getCheckoutMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "AddToCart",
-      requestType = com.github.diegogomesaraujo.store.grpc.ProductRPC.class,
-      responseType = com.github.diegogomesaraujo.store.grpc.CartRPC.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.CLIENT_STREAMING)
-  public static io.grpc.MethodDescriptor<com.github.diegogomesaraujo.store.grpc.ProductRPC,
-      com.github.diegogomesaraujo.store.grpc.CartRPC> getAddToCartMethod() {
-    io.grpc.MethodDescriptor<com.github.diegogomesaraujo.store.grpc.ProductRPC, com.github.diegogomesaraujo.store.grpc.CartRPC> getAddToCartMethod;
-    if ((getAddToCartMethod = ShoppingServiceGrpc.getAddToCartMethod) == null) {
-      synchronized (ShoppingServiceGrpc.class) {
-        if ((getAddToCartMethod = ShoppingServiceGrpc.getAddToCartMethod) == null) {
-          ShoppingServiceGrpc.getAddToCartMethod = getAddToCartMethod = 
-              io.grpc.MethodDescriptor.<com.github.diegogomesaraujo.store.grpc.ProductRPC, com.github.diegogomesaraujo.store.grpc.CartRPC>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.CLIENT_STREAMING)
-              .setFullMethodName(generateFullMethodName(
-                  "com.github.diegogomesaraujo.store.grpc.ShoppingService", "AddToCart"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.github.diegogomesaraujo.store.grpc.ProductRPC.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.github.diegogomesaraujo.store.grpc.CartRPC.getDefaultInstance()))
-                  .setSchemaDescriptor(new ShoppingServiceMethodDescriptorSupplier("AddToCart"))
-                  .build();
-          }
-        }
-     }
-     return getAddToCartMethod;
-  }
-
-  private static volatile io.grpc.MethodDescriptor<com.github.diegogomesaraujo.store.grpc.ProductRPC,
-      com.github.diegogomesaraujo.store.grpc.CartRPC> getRemoveFromCartMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "RemoveFromCart",
-      requestType = com.github.diegogomesaraujo.store.grpc.ProductRPC.class,
-      responseType = com.github.diegogomesaraujo.store.grpc.CartRPC.class,
+      fullMethodName = SERVICE_NAME + '/' + "Checkout",
+      requestType = com.github.diegogomesaraujo.store.grpc.PaymentRequest.class,
+      responseType = com.github.diegogomesaraujo.store.grpc.MessageResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.github.diegogomesaraujo.store.grpc.ProductRPC,
-      com.github.diegogomesaraujo.store.grpc.CartRPC> getRemoveFromCartMethod() {
-    io.grpc.MethodDescriptor<com.github.diegogomesaraujo.store.grpc.ProductRPC, com.github.diegogomesaraujo.store.grpc.CartRPC> getRemoveFromCartMethod;
-    if ((getRemoveFromCartMethod = ShoppingServiceGrpc.getRemoveFromCartMethod) == null) {
+  public static io.grpc.MethodDescriptor<com.github.diegogomesaraujo.store.grpc.PaymentRequest,
+      com.github.diegogomesaraujo.store.grpc.MessageResponse> getCheckoutMethod() {
+    io.grpc.MethodDescriptor<com.github.diegogomesaraujo.store.grpc.PaymentRequest, com.github.diegogomesaraujo.store.grpc.MessageResponse> getCheckoutMethod;
+    if ((getCheckoutMethod = ShoppingServiceGrpc.getCheckoutMethod) == null) {
       synchronized (ShoppingServiceGrpc.class) {
-        if ((getRemoveFromCartMethod = ShoppingServiceGrpc.getRemoveFromCartMethod) == null) {
-          ShoppingServiceGrpc.getRemoveFromCartMethod = getRemoveFromCartMethod = 
-              io.grpc.MethodDescriptor.<com.github.diegogomesaraujo.store.grpc.ProductRPC, com.github.diegogomesaraujo.store.grpc.CartRPC>newBuilder()
+        if ((getCheckoutMethod = ShoppingServiceGrpc.getCheckoutMethod) == null) {
+          ShoppingServiceGrpc.getCheckoutMethod = getCheckoutMethod = 
+              io.grpc.MethodDescriptor.<com.github.diegogomesaraujo.store.grpc.PaymentRequest, com.github.diegogomesaraujo.store.grpc.MessageResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(
-                  "com.github.diegogomesaraujo.store.grpc.ShoppingService", "RemoveFromCart"))
+                  "com.github.diegogomesaraujo.store.grpc.ShoppingService", "Checkout"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.github.diegogomesaraujo.store.grpc.ProductRPC.getDefaultInstance()))
+                  com.github.diegogomesaraujo.store.grpc.PaymentRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.github.diegogomesaraujo.store.grpc.CartRPC.getDefaultInstance()))
-                  .setSchemaDescriptor(new ShoppingServiceMethodDescriptorSupplier("RemoveFromCart"))
+                  com.github.diegogomesaraujo.store.grpc.MessageResponse.getDefaultInstance()))
+                  .setSchemaDescriptor(new ShoppingServiceMethodDescriptorSupplier("Checkout"))
                   .build();
           }
         }
      }
-     return getRemoveFromCartMethod;
-  }
-
-  private static volatile io.grpc.MethodDescriptor<com.google.protobuf.Empty,
-      com.github.diegogomesaraujo.store.grpc.CartRPC> getGetCartMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "GetCart",
-      requestType = com.google.protobuf.Empty.class,
-      responseType = com.github.diegogomesaraujo.store.grpc.CartRPC.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.google.protobuf.Empty,
-      com.github.diegogomesaraujo.store.grpc.CartRPC> getGetCartMethod() {
-    io.grpc.MethodDescriptor<com.google.protobuf.Empty, com.github.diegogomesaraujo.store.grpc.CartRPC> getGetCartMethod;
-    if ((getGetCartMethod = ShoppingServiceGrpc.getGetCartMethod) == null) {
-      synchronized (ShoppingServiceGrpc.class) {
-        if ((getGetCartMethod = ShoppingServiceGrpc.getGetCartMethod) == null) {
-          ShoppingServiceGrpc.getGetCartMethod = getGetCartMethod = 
-              io.grpc.MethodDescriptor.<com.google.protobuf.Empty, com.github.diegogomesaraujo.store.grpc.CartRPC>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "com.github.diegogomesaraujo.store.grpc.ShoppingService", "GetCart"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.google.protobuf.Empty.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.github.diegogomesaraujo.store.grpc.CartRPC.getDefaultInstance()))
-                  .setSchemaDescriptor(new ShoppingServiceMethodDescriptorSupplier("GetCart"))
-                  .build();
-          }
-        }
-     }
-     return getGetCartMethod;
+     return getCheckoutMethod;
   }
 
   /**
@@ -184,30 +120,16 @@ public final class ShoppingServiceGrpc {
 
     /**
      */
-    public void listProducts(com.github.diegogomesaraujo.store.grpc.ProductRequestRPC request,
-        io.grpc.stub.StreamObserver<com.github.diegogomesaraujo.store.grpc.ProductResponseRPC> responseObserver) {
+    public void listProducts(com.github.diegogomesaraujo.store.grpc.PaginationRequest request,
+        io.grpc.stub.StreamObserver<com.github.diegogomesaraujo.store.grpc.ProductResponse> responseObserver) {
       asyncUnimplementedUnaryCall(getListProductsMethod(), responseObserver);
     }
 
     /**
      */
-    public io.grpc.stub.StreamObserver<com.github.diegogomesaraujo.store.grpc.ProductRPC> addToCart(
-        io.grpc.stub.StreamObserver<com.github.diegogomesaraujo.store.grpc.CartRPC> responseObserver) {
-      return asyncUnimplementedStreamingCall(getAddToCartMethod(), responseObserver);
-    }
-
-    /**
-     */
-    public void removeFromCart(com.github.diegogomesaraujo.store.grpc.ProductRPC request,
-        io.grpc.stub.StreamObserver<com.github.diegogomesaraujo.store.grpc.CartRPC> responseObserver) {
-      asyncUnimplementedUnaryCall(getRemoveFromCartMethod(), responseObserver);
-    }
-
-    /**
-     */
-    public void getCart(com.google.protobuf.Empty request,
-        io.grpc.stub.StreamObserver<com.github.diegogomesaraujo.store.grpc.CartRPC> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetCartMethod(), responseObserver);
+    public void checkout(com.github.diegogomesaraujo.store.grpc.PaymentRequest request,
+        io.grpc.stub.StreamObserver<com.github.diegogomesaraujo.store.grpc.MessageResponse> responseObserver) {
+      asyncUnimplementedUnaryCall(getCheckoutMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
@@ -216,30 +138,16 @@ public final class ShoppingServiceGrpc {
             getListProductsMethod(),
             asyncUnaryCall(
               new MethodHandlers<
-                com.github.diegogomesaraujo.store.grpc.ProductRequestRPC,
-                com.github.diegogomesaraujo.store.grpc.ProductResponseRPC>(
+                com.github.diegogomesaraujo.store.grpc.PaginationRequest,
+                com.github.diegogomesaraujo.store.grpc.ProductResponse>(
                   this, METHODID_LIST_PRODUCTS)))
           .addMethod(
-            getAddToCartMethod(),
-            asyncClientStreamingCall(
-              new MethodHandlers<
-                com.github.diegogomesaraujo.store.grpc.ProductRPC,
-                com.github.diegogomesaraujo.store.grpc.CartRPC>(
-                  this, METHODID_ADD_TO_CART)))
-          .addMethod(
-            getRemoveFromCartMethod(),
+            getCheckoutMethod(),
             asyncUnaryCall(
               new MethodHandlers<
-                com.github.diegogomesaraujo.store.grpc.ProductRPC,
-                com.github.diegogomesaraujo.store.grpc.CartRPC>(
-                  this, METHODID_REMOVE_FROM_CART)))
-          .addMethod(
-            getGetCartMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.google.protobuf.Empty,
-                com.github.diegogomesaraujo.store.grpc.CartRPC>(
-                  this, METHODID_GET_CART)))
+                com.github.diegogomesaraujo.store.grpc.PaymentRequest,
+                com.github.diegogomesaraujo.store.grpc.MessageResponse>(
+                  this, METHODID_CHECKOUT)))
           .build();
     }
   }
@@ -264,34 +172,18 @@ public final class ShoppingServiceGrpc {
 
     /**
      */
-    public void listProducts(com.github.diegogomesaraujo.store.grpc.ProductRequestRPC request,
-        io.grpc.stub.StreamObserver<com.github.diegogomesaraujo.store.grpc.ProductResponseRPC> responseObserver) {
+    public void listProducts(com.github.diegogomesaraujo.store.grpc.PaginationRequest request,
+        io.grpc.stub.StreamObserver<com.github.diegogomesaraujo.store.grpc.ProductResponse> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getListProductsMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
      */
-    public io.grpc.stub.StreamObserver<com.github.diegogomesaraujo.store.grpc.ProductRPC> addToCart(
-        io.grpc.stub.StreamObserver<com.github.diegogomesaraujo.store.grpc.CartRPC> responseObserver) {
-      return asyncClientStreamingCall(
-          getChannel().newCall(getAddToCartMethod(), getCallOptions()), responseObserver);
-    }
-
-    /**
-     */
-    public void removeFromCart(com.github.diegogomesaraujo.store.grpc.ProductRPC request,
-        io.grpc.stub.StreamObserver<com.github.diegogomesaraujo.store.grpc.CartRPC> responseObserver) {
+    public void checkout(com.github.diegogomesaraujo.store.grpc.PaymentRequest request,
+        io.grpc.stub.StreamObserver<com.github.diegogomesaraujo.store.grpc.MessageResponse> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getRemoveFromCartMethod(), getCallOptions()), request, responseObserver);
-    }
-
-    /**
-     */
-    public void getCart(com.google.protobuf.Empty request,
-        io.grpc.stub.StreamObserver<com.github.diegogomesaraujo.store.grpc.CartRPC> responseObserver) {
-      asyncUnaryCall(
-          getChannel().newCall(getGetCartMethod(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getCheckoutMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -315,23 +207,16 @@ public final class ShoppingServiceGrpc {
 
     /**
      */
-    public com.github.diegogomesaraujo.store.grpc.ProductResponseRPC listProducts(com.github.diegogomesaraujo.store.grpc.ProductRequestRPC request) {
+    public com.github.diegogomesaraujo.store.grpc.ProductResponse listProducts(com.github.diegogomesaraujo.store.grpc.PaginationRequest request) {
       return blockingUnaryCall(
           getChannel(), getListProductsMethod(), getCallOptions(), request);
     }
 
     /**
      */
-    public com.github.diegogomesaraujo.store.grpc.CartRPC removeFromCart(com.github.diegogomesaraujo.store.grpc.ProductRPC request) {
+    public com.github.diegogomesaraujo.store.grpc.MessageResponse checkout(com.github.diegogomesaraujo.store.grpc.PaymentRequest request) {
       return blockingUnaryCall(
-          getChannel(), getRemoveFromCartMethod(), getCallOptions(), request);
-    }
-
-    /**
-     */
-    public com.github.diegogomesaraujo.store.grpc.CartRPC getCart(com.google.protobuf.Empty request) {
-      return blockingUnaryCall(
-          getChannel(), getGetCartMethod(), getCallOptions(), request);
+          getChannel(), getCheckoutMethod(), getCallOptions(), request);
     }
   }
 
@@ -355,33 +240,23 @@ public final class ShoppingServiceGrpc {
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.github.diegogomesaraujo.store.grpc.ProductResponseRPC> listProducts(
-        com.github.diegogomesaraujo.store.grpc.ProductRequestRPC request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.github.diegogomesaraujo.store.grpc.ProductResponse> listProducts(
+        com.github.diegogomesaraujo.store.grpc.PaginationRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getListProductsMethod(), getCallOptions()), request);
     }
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.github.diegogomesaraujo.store.grpc.CartRPC> removeFromCart(
-        com.github.diegogomesaraujo.store.grpc.ProductRPC request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.github.diegogomesaraujo.store.grpc.MessageResponse> checkout(
+        com.github.diegogomesaraujo.store.grpc.PaymentRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getRemoveFromCartMethod(), getCallOptions()), request);
-    }
-
-    /**
-     */
-    public com.google.common.util.concurrent.ListenableFuture<com.github.diegogomesaraujo.store.grpc.CartRPC> getCart(
-        com.google.protobuf.Empty request) {
-      return futureUnaryCall(
-          getChannel().newCall(getGetCartMethod(), getCallOptions()), request);
+          getChannel().newCall(getCheckoutMethod(), getCallOptions()), request);
     }
   }
 
   private static final int METHODID_LIST_PRODUCTS = 0;
-  private static final int METHODID_REMOVE_FROM_CART = 1;
-  private static final int METHODID_GET_CART = 2;
-  private static final int METHODID_ADD_TO_CART = 3;
+  private static final int METHODID_CHECKOUT = 1;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -401,16 +276,12 @@ public final class ShoppingServiceGrpc {
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
         case METHODID_LIST_PRODUCTS:
-          serviceImpl.listProducts((com.github.diegogomesaraujo.store.grpc.ProductRequestRPC) request,
-              (io.grpc.stub.StreamObserver<com.github.diegogomesaraujo.store.grpc.ProductResponseRPC>) responseObserver);
+          serviceImpl.listProducts((com.github.diegogomesaraujo.store.grpc.PaginationRequest) request,
+              (io.grpc.stub.StreamObserver<com.github.diegogomesaraujo.store.grpc.ProductResponse>) responseObserver);
           break;
-        case METHODID_REMOVE_FROM_CART:
-          serviceImpl.removeFromCart((com.github.diegogomesaraujo.store.grpc.ProductRPC) request,
-              (io.grpc.stub.StreamObserver<com.github.diegogomesaraujo.store.grpc.CartRPC>) responseObserver);
-          break;
-        case METHODID_GET_CART:
-          serviceImpl.getCart((com.google.protobuf.Empty) request,
-              (io.grpc.stub.StreamObserver<com.github.diegogomesaraujo.store.grpc.CartRPC>) responseObserver);
+        case METHODID_CHECKOUT:
+          serviceImpl.checkout((com.github.diegogomesaraujo.store.grpc.PaymentRequest) request,
+              (io.grpc.stub.StreamObserver<com.github.diegogomesaraujo.store.grpc.MessageResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -422,9 +293,6 @@ public final class ShoppingServiceGrpc {
     public io.grpc.stub.StreamObserver<Req> invoke(
         io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
-        case METHODID_ADD_TO_CART:
-          return (io.grpc.stub.StreamObserver<Req>) serviceImpl.addToCart(
-              (io.grpc.stub.StreamObserver<com.github.diegogomesaraujo.store.grpc.CartRPC>) responseObserver);
         default:
           throw new AssertionError();
       }
@@ -477,9 +345,7 @@ public final class ShoppingServiceGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new ShoppingServiceFileDescriptorSupplier())
               .addMethod(getListProductsMethod())
-              .addMethod(getAddToCartMethod())
-              .addMethod(getRemoveFromCartMethod())
-              .addMethod(getGetCartMethod())
+              .addMethod(getCheckoutMethod())
               .build();
         }
       }

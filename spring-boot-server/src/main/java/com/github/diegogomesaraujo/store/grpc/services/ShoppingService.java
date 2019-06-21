@@ -7,34 +7,34 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 
 import com.github.diegogomesaraujo.documents.Product;
-import com.github.diegogomesaraujo.repositories.CartRepository;
 import com.github.diegogomesaraujo.repositories.ProductRepository;
-import com.github.diegogomesaraujo.store.grpc.CartRPC;
+import com.github.diegogomesaraujo.services.CheckoutService;
+import com.github.diegogomesaraujo.store.grpc.MessageResponse;
+import com.github.diegogomesaraujo.store.grpc.PaginationRequest;
+import com.github.diegogomesaraujo.store.grpc.PaymentRequest;
 import com.github.diegogomesaraujo.store.grpc.ProductRPC;
-import com.github.diegogomesaraujo.store.grpc.ProductRequestRPC;
-import com.github.diegogomesaraujo.store.grpc.ProductResponseRPC;
-import com.github.diegogomesaraujo.store.grpc.ProductResponseRPC.Builder;
+import com.github.diegogomesaraujo.store.grpc.ProductResponse;
+import com.github.diegogomesaraujo.store.grpc.ProductResponse.Builder;
 import com.github.diegogomesaraujo.store.grpc.ShoppingServiceGrpc.ShoppingServiceImplBase;
 import com.github.diegogomesaraujo.store.grpc.mappers.GRPCMapper;
-import com.google.protobuf.Empty;
 
 import io.grpc.stub.StreamObserver;
 
 @GRpcService
 public class ShoppingService extends ShoppingServiceImplBase {
-	
-	@Autowired
-	private CartRepository cartRepository;
 
 	@Autowired
 	private ProductRepository productRepository;
+	
+	@Autowired
+	private CheckoutService checkoutService;
 
 	@Autowired
 	@Qualifier("product")
 	private GRPCMapper<ProductRPC, Product> productMapper;
 	
 	@Override
-	public void listProducts(ProductRequestRPC request, StreamObserver<ProductResponseRPC> responseObserver) {
+	public void listProducts(PaginationRequest request, StreamObserver<ProductResponse> responseObserver) {
 		int size = 10;
 		
 		if(request.getSize() > 0) {
@@ -43,7 +43,7 @@ public class ShoppingService extends ShoppingServiceImplBase {
 		
 		Page<Product> products = productRepository.findAll(PageRequest.of(request.getPage(), size));
 		
-		Builder productResponse = ProductResponseRPC.newBuilder();
+		Builder productResponse = ProductResponse.newBuilder();
 		
 		products.forEach(p -> productResponse.addProducts(productMapper.toRpc(p)));
 		
@@ -52,21 +52,9 @@ public class ShoppingService extends ShoppingServiceImplBase {
 	}
 
 	@Override
-	public StreamObserver<ProductRPC> addToCart(StreamObserver<CartRPC> responseObserver) {
+	public void checkout(PaymentRequest request, StreamObserver<MessageResponse> responseObserver) {
 		// TODO Auto-generated method stub
-		return super.addToCart(responseObserver);
-	}
-
-	@Override
-	public void removeFromCart(ProductRPC request, StreamObserver<CartRPC> responseObserver) {
-		// TODO Auto-generated method stub
-		super.removeFromCart(request, responseObserver);
-	}
-
-	@Override
-	public void getCart(Empty request, StreamObserver<CartRPC> responseObserver) {
-		// TODO Auto-generated method stub
-		super.getCart(request, responseObserver);
+		super.checkout(request, responseObserver);
 	}
 
 }

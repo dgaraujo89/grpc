@@ -4,18 +4,18 @@
 package com.github.diegogomesaraujo.store.grpc;
 
 /**
- * Protobuf type {@code com.github.diegogomesaraujo.store.grpc.CartRPC}
+ * Protobuf type {@code com.github.diegogomesaraujo.store.grpc.PaymentRequest}
  */
-public  final class CartRPC extends
+public  final class PaymentRequest extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:com.github.diegogomesaraujo.store.grpc.CartRPC)
-    CartRPCOrBuilder {
+    // @@protoc_insertion_point(message_implements:com.github.diegogomesaraujo.store.grpc.PaymentRequest)
+    PaymentRequestOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use CartRPC.newBuilder() to construct.
-  private CartRPC(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use PaymentRequest.newBuilder() to construct.
+  private PaymentRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private CartRPC() {
+  private PaymentRequest() {
     products_ = java.util.Collections.emptyList();
   }
 
@@ -24,7 +24,7 @@ private static final long serialVersionUID = 0L;
   getUnknownFields() {
     return this.unknownFields;
   }
-  private CartRPC(
+  private PaymentRequest(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
@@ -43,10 +43,23 @@ private static final long serialVersionUID = 0L;
           case 0:
             done = true;
             break;
-          case 10: {
-            if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+          case 18: {
+            com.github.diegogomesaraujo.store.grpc.Payment.Builder subBuilder = null;
+            if (payment_ != null) {
+              subBuilder = payment_.toBuilder();
+            }
+            payment_ = input.readMessage(com.github.diegogomesaraujo.store.grpc.Payment.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(payment_);
+              payment_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 26: {
+            if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
               products_ = new java.util.ArrayList<com.github.diegogomesaraujo.store.grpc.ProductRPC>();
-              mutable_bitField0_ |= 0x00000001;
+              mutable_bitField0_ |= 0x00000002;
             }
             products_.add(
                 input.readMessage(com.github.diegogomesaraujo.store.grpc.ProductRPC.parser(), extensionRegistry));
@@ -67,7 +80,7 @@ private static final long serialVersionUID = 0L;
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
     } finally {
-      if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+      if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
         products_ = java.util.Collections.unmodifiableList(products_);
       }
       this.unknownFields = unknownFields.build();
@@ -76,46 +89,68 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.github.diegogomesaraujo.store.grpc.Store.internal_static_com_github_diegogomesaraujo_store_grpc_CartRPC_descriptor;
+    return com.github.diegogomesaraujo.store.grpc.Store.internal_static_com_github_diegogomesaraujo_store_grpc_PaymentRequest_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.github.diegogomesaraujo.store.grpc.Store.internal_static_com_github_diegogomesaraujo_store_grpc_CartRPC_fieldAccessorTable
+    return com.github.diegogomesaraujo.store.grpc.Store.internal_static_com_github_diegogomesaraujo_store_grpc_PaymentRequest_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.github.diegogomesaraujo.store.grpc.CartRPC.class, com.github.diegogomesaraujo.store.grpc.CartRPC.Builder.class);
+            com.github.diegogomesaraujo.store.grpc.PaymentRequest.class, com.github.diegogomesaraujo.store.grpc.PaymentRequest.Builder.class);
   }
 
-  public static final int PRODUCTS_FIELD_NUMBER = 1;
+  private int bitField0_;
+  public static final int PAYMENT_FIELD_NUMBER = 2;
+  private com.github.diegogomesaraujo.store.grpc.Payment payment_;
+  /**
+   * <code>.com.github.diegogomesaraujo.store.grpc.Payment payment = 2;</code>
+   */
+  public boolean hasPayment() {
+    return payment_ != null;
+  }
+  /**
+   * <code>.com.github.diegogomesaraujo.store.grpc.Payment payment = 2;</code>
+   */
+  public com.github.diegogomesaraujo.store.grpc.Payment getPayment() {
+    return payment_ == null ? com.github.diegogomesaraujo.store.grpc.Payment.getDefaultInstance() : payment_;
+  }
+  /**
+   * <code>.com.github.diegogomesaraujo.store.grpc.Payment payment = 2;</code>
+   */
+  public com.github.diegogomesaraujo.store.grpc.PaymentOrBuilder getPaymentOrBuilder() {
+    return getPayment();
+  }
+
+  public static final int PRODUCTS_FIELD_NUMBER = 3;
   private java.util.List<com.github.diegogomesaraujo.store.grpc.ProductRPC> products_;
   /**
-   * <code>repeated .com.github.diegogomesaraujo.store.grpc.ProductRPC products = 1;</code>
+   * <code>repeated .com.github.diegogomesaraujo.store.grpc.ProductRPC products = 3;</code>
    */
   public java.util.List<com.github.diegogomesaraujo.store.grpc.ProductRPC> getProductsList() {
     return products_;
   }
   /**
-   * <code>repeated .com.github.diegogomesaraujo.store.grpc.ProductRPC products = 1;</code>
+   * <code>repeated .com.github.diegogomesaraujo.store.grpc.ProductRPC products = 3;</code>
    */
   public java.util.List<? extends com.github.diegogomesaraujo.store.grpc.ProductRPCOrBuilder> 
       getProductsOrBuilderList() {
     return products_;
   }
   /**
-   * <code>repeated .com.github.diegogomesaraujo.store.grpc.ProductRPC products = 1;</code>
+   * <code>repeated .com.github.diegogomesaraujo.store.grpc.ProductRPC products = 3;</code>
    */
   public int getProductsCount() {
     return products_.size();
   }
   /**
-   * <code>repeated .com.github.diegogomesaraujo.store.grpc.ProductRPC products = 1;</code>
+   * <code>repeated .com.github.diegogomesaraujo.store.grpc.ProductRPC products = 3;</code>
    */
   public com.github.diegogomesaraujo.store.grpc.ProductRPC getProducts(int index) {
     return products_.get(index);
   }
   /**
-   * <code>repeated .com.github.diegogomesaraujo.store.grpc.ProductRPC products = 1;</code>
+   * <code>repeated .com.github.diegogomesaraujo.store.grpc.ProductRPC products = 3;</code>
    */
   public com.github.diegogomesaraujo.store.grpc.ProductRPCOrBuilder getProductsOrBuilder(
       int index) {
@@ -136,8 +171,11 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
+    if (payment_ != null) {
+      output.writeMessage(2, getPayment());
+    }
     for (int i = 0; i < products_.size(); i++) {
-      output.writeMessage(1, products_.get(i));
+      output.writeMessage(3, products_.get(i));
     }
     unknownFields.writeTo(output);
   }
@@ -148,9 +186,13 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
+    if (payment_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(2, getPayment());
+    }
     for (int i = 0; i < products_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(1, products_.get(i));
+        .computeMessageSize(3, products_.get(i));
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -162,12 +204,17 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.github.diegogomesaraujo.store.grpc.CartRPC)) {
+    if (!(obj instanceof com.github.diegogomesaraujo.store.grpc.PaymentRequest)) {
       return super.equals(obj);
     }
-    com.github.diegogomesaraujo.store.grpc.CartRPC other = (com.github.diegogomesaraujo.store.grpc.CartRPC) obj;
+    com.github.diegogomesaraujo.store.grpc.PaymentRequest other = (com.github.diegogomesaraujo.store.grpc.PaymentRequest) obj;
 
     boolean result = true;
+    result = result && (hasPayment() == other.hasPayment());
+    if (hasPayment()) {
+      result = result && getPayment()
+          .equals(other.getPayment());
+    }
     result = result && getProductsList()
         .equals(other.getProductsList());
     result = result && unknownFields.equals(other.unknownFields);
@@ -181,6 +228,10 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
+    if (hasPayment()) {
+      hash = (37 * hash) + PAYMENT_FIELD_NUMBER;
+      hash = (53 * hash) + getPayment().hashCode();
+    }
     if (getProductsCount() > 0) {
       hash = (37 * hash) + PRODUCTS_FIELD_NUMBER;
       hash = (53 * hash) + getProductsList().hashCode();
@@ -190,69 +241,69 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static com.github.diegogomesaraujo.store.grpc.CartRPC parseFrom(
+  public static com.github.diegogomesaraujo.store.grpc.PaymentRequest parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.github.diegogomesaraujo.store.grpc.CartRPC parseFrom(
+  public static com.github.diegogomesaraujo.store.grpc.PaymentRequest parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.github.diegogomesaraujo.store.grpc.CartRPC parseFrom(
+  public static com.github.diegogomesaraujo.store.grpc.PaymentRequest parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.github.diegogomesaraujo.store.grpc.CartRPC parseFrom(
+  public static com.github.diegogomesaraujo.store.grpc.PaymentRequest parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.github.diegogomesaraujo.store.grpc.CartRPC parseFrom(byte[] data)
+  public static com.github.diegogomesaraujo.store.grpc.PaymentRequest parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.github.diegogomesaraujo.store.grpc.CartRPC parseFrom(
+  public static com.github.diegogomesaraujo.store.grpc.PaymentRequest parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.github.diegogomesaraujo.store.grpc.CartRPC parseFrom(java.io.InputStream input)
+  public static com.github.diegogomesaraujo.store.grpc.PaymentRequest parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.github.diegogomesaraujo.store.grpc.CartRPC parseFrom(
+  public static com.github.diegogomesaraujo.store.grpc.PaymentRequest parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.github.diegogomesaraujo.store.grpc.CartRPC parseDelimitedFrom(java.io.InputStream input)
+  public static com.github.diegogomesaraujo.store.grpc.PaymentRequest parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-  public static com.github.diegogomesaraujo.store.grpc.CartRPC parseDelimitedFrom(
+  public static com.github.diegogomesaraujo.store.grpc.PaymentRequest parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.github.diegogomesaraujo.store.grpc.CartRPC parseFrom(
+  public static com.github.diegogomesaraujo.store.grpc.PaymentRequest parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.github.diegogomesaraujo.store.grpc.CartRPC parseFrom(
+  public static com.github.diegogomesaraujo.store.grpc.PaymentRequest parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -265,7 +316,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.github.diegogomesaraujo.store.grpc.CartRPC prototype) {
+  public static Builder newBuilder(com.github.diegogomesaraujo.store.grpc.PaymentRequest prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -281,26 +332,26 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code com.github.diegogomesaraujo.store.grpc.CartRPC}
+   * Protobuf type {@code com.github.diegogomesaraujo.store.grpc.PaymentRequest}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:com.github.diegogomesaraujo.store.grpc.CartRPC)
-      com.github.diegogomesaraujo.store.grpc.CartRPCOrBuilder {
+      // @@protoc_insertion_point(builder_implements:com.github.diegogomesaraujo.store.grpc.PaymentRequest)
+      com.github.diegogomesaraujo.store.grpc.PaymentRequestOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.github.diegogomesaraujo.store.grpc.Store.internal_static_com_github_diegogomesaraujo_store_grpc_CartRPC_descriptor;
+      return com.github.diegogomesaraujo.store.grpc.Store.internal_static_com_github_diegogomesaraujo_store_grpc_PaymentRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.github.diegogomesaraujo.store.grpc.Store.internal_static_com_github_diegogomesaraujo_store_grpc_CartRPC_fieldAccessorTable
+      return com.github.diegogomesaraujo.store.grpc.Store.internal_static_com_github_diegogomesaraujo_store_grpc_PaymentRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.github.diegogomesaraujo.store.grpc.CartRPC.class, com.github.diegogomesaraujo.store.grpc.CartRPC.Builder.class);
+              com.github.diegogomesaraujo.store.grpc.PaymentRequest.class, com.github.diegogomesaraujo.store.grpc.PaymentRequest.Builder.class);
     }
 
-    // Construct using com.github.diegogomesaraujo.store.grpc.CartRPC.newBuilder()
+    // Construct using com.github.diegogomesaraujo.store.grpc.PaymentRequest.newBuilder()
     private Builder() {
       maybeForceBuilderInitialization();
     }
@@ -319,9 +370,15 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      if (paymentBuilder_ == null) {
+        payment_ = null;
+      } else {
+        payment_ = null;
+        paymentBuilder_ = null;
+      }
       if (productsBuilder_ == null) {
         products_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000002);
       } else {
         productsBuilder_.clear();
       }
@@ -331,17 +388,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.github.diegogomesaraujo.store.grpc.Store.internal_static_com_github_diegogomesaraujo_store_grpc_CartRPC_descriptor;
+      return com.github.diegogomesaraujo.store.grpc.Store.internal_static_com_github_diegogomesaraujo_store_grpc_PaymentRequest_descriptor;
     }
 
     @java.lang.Override
-    public com.github.diegogomesaraujo.store.grpc.CartRPC getDefaultInstanceForType() {
-      return com.github.diegogomesaraujo.store.grpc.CartRPC.getDefaultInstance();
+    public com.github.diegogomesaraujo.store.grpc.PaymentRequest getDefaultInstanceForType() {
+      return com.github.diegogomesaraujo.store.grpc.PaymentRequest.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.github.diegogomesaraujo.store.grpc.CartRPC build() {
-      com.github.diegogomesaraujo.store.grpc.CartRPC result = buildPartial();
+    public com.github.diegogomesaraujo.store.grpc.PaymentRequest build() {
+      com.github.diegogomesaraujo.store.grpc.PaymentRequest result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -349,18 +406,25 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.github.diegogomesaraujo.store.grpc.CartRPC buildPartial() {
-      com.github.diegogomesaraujo.store.grpc.CartRPC result = new com.github.diegogomesaraujo.store.grpc.CartRPC(this);
+    public com.github.diegogomesaraujo.store.grpc.PaymentRequest buildPartial() {
+      com.github.diegogomesaraujo.store.grpc.PaymentRequest result = new com.github.diegogomesaraujo.store.grpc.PaymentRequest(this);
       int from_bitField0_ = bitField0_;
+      int to_bitField0_ = 0;
+      if (paymentBuilder_ == null) {
+        result.payment_ = payment_;
+      } else {
+        result.payment_ = paymentBuilder_.build();
+      }
       if (productsBuilder_ == null) {
-        if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((bitField0_ & 0x00000002) == 0x00000002)) {
           products_ = java.util.Collections.unmodifiableList(products_);
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.products_ = products_;
       } else {
         result.products_ = productsBuilder_.build();
       }
+      result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
     }
@@ -399,21 +463,24 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.github.diegogomesaraujo.store.grpc.CartRPC) {
-        return mergeFrom((com.github.diegogomesaraujo.store.grpc.CartRPC)other);
+      if (other instanceof com.github.diegogomesaraujo.store.grpc.PaymentRequest) {
+        return mergeFrom((com.github.diegogomesaraujo.store.grpc.PaymentRequest)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.github.diegogomesaraujo.store.grpc.CartRPC other) {
-      if (other == com.github.diegogomesaraujo.store.grpc.CartRPC.getDefaultInstance()) return this;
+    public Builder mergeFrom(com.github.diegogomesaraujo.store.grpc.PaymentRequest other) {
+      if (other == com.github.diegogomesaraujo.store.grpc.PaymentRequest.getDefaultInstance()) return this;
+      if (other.hasPayment()) {
+        mergePayment(other.getPayment());
+      }
       if (productsBuilder_ == null) {
         if (!other.products_.isEmpty()) {
           if (products_.isEmpty()) {
             products_ = other.products_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000002);
           } else {
             ensureProductsIsMutable();
             products_.addAll(other.products_);
@@ -426,7 +493,7 @@ private static final long serialVersionUID = 0L;
             productsBuilder_.dispose();
             productsBuilder_ = null;
             products_ = other.products_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000002);
             productsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getProductsFieldBuilder() : null;
@@ -450,11 +517,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.github.diegogomesaraujo.store.grpc.CartRPC parsedMessage = null;
+      com.github.diegogomesaraujo.store.grpc.PaymentRequest parsedMessage = null;
       try {
         parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.github.diegogomesaraujo.store.grpc.CartRPC) e.getUnfinishedMessage();
+        parsedMessage = (com.github.diegogomesaraujo.store.grpc.PaymentRequest) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
         if (parsedMessage != null) {
@@ -465,12 +532,129 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
+    private com.github.diegogomesaraujo.store.grpc.Payment payment_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.github.diegogomesaraujo.store.grpc.Payment, com.github.diegogomesaraujo.store.grpc.Payment.Builder, com.github.diegogomesaraujo.store.grpc.PaymentOrBuilder> paymentBuilder_;
+    /**
+     * <code>.com.github.diegogomesaraujo.store.grpc.Payment payment = 2;</code>
+     */
+    public boolean hasPayment() {
+      return paymentBuilder_ != null || payment_ != null;
+    }
+    /**
+     * <code>.com.github.diegogomesaraujo.store.grpc.Payment payment = 2;</code>
+     */
+    public com.github.diegogomesaraujo.store.grpc.Payment getPayment() {
+      if (paymentBuilder_ == null) {
+        return payment_ == null ? com.github.diegogomesaraujo.store.grpc.Payment.getDefaultInstance() : payment_;
+      } else {
+        return paymentBuilder_.getMessage();
+      }
+    }
+    /**
+     * <code>.com.github.diegogomesaraujo.store.grpc.Payment payment = 2;</code>
+     */
+    public Builder setPayment(com.github.diegogomesaraujo.store.grpc.Payment value) {
+      if (paymentBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        payment_ = value;
+        onChanged();
+      } else {
+        paymentBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <code>.com.github.diegogomesaraujo.store.grpc.Payment payment = 2;</code>
+     */
+    public Builder setPayment(
+        com.github.diegogomesaraujo.store.grpc.Payment.Builder builderForValue) {
+      if (paymentBuilder_ == null) {
+        payment_ = builderForValue.build();
+        onChanged();
+      } else {
+        paymentBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <code>.com.github.diegogomesaraujo.store.grpc.Payment payment = 2;</code>
+     */
+    public Builder mergePayment(com.github.diegogomesaraujo.store.grpc.Payment value) {
+      if (paymentBuilder_ == null) {
+        if (payment_ != null) {
+          payment_ =
+            com.github.diegogomesaraujo.store.grpc.Payment.newBuilder(payment_).mergeFrom(value).buildPartial();
+        } else {
+          payment_ = value;
+        }
+        onChanged();
+      } else {
+        paymentBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <code>.com.github.diegogomesaraujo.store.grpc.Payment payment = 2;</code>
+     */
+    public Builder clearPayment() {
+      if (paymentBuilder_ == null) {
+        payment_ = null;
+        onChanged();
+      } else {
+        payment_ = null;
+        paymentBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <code>.com.github.diegogomesaraujo.store.grpc.Payment payment = 2;</code>
+     */
+    public com.github.diegogomesaraujo.store.grpc.Payment.Builder getPaymentBuilder() {
+      
+      onChanged();
+      return getPaymentFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.com.github.diegogomesaraujo.store.grpc.Payment payment = 2;</code>
+     */
+    public com.github.diegogomesaraujo.store.grpc.PaymentOrBuilder getPaymentOrBuilder() {
+      if (paymentBuilder_ != null) {
+        return paymentBuilder_.getMessageOrBuilder();
+      } else {
+        return payment_ == null ?
+            com.github.diegogomesaraujo.store.grpc.Payment.getDefaultInstance() : payment_;
+      }
+    }
+    /**
+     * <code>.com.github.diegogomesaraujo.store.grpc.Payment payment = 2;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.github.diegogomesaraujo.store.grpc.Payment, com.github.diegogomesaraujo.store.grpc.Payment.Builder, com.github.diegogomesaraujo.store.grpc.PaymentOrBuilder> 
+        getPaymentFieldBuilder() {
+      if (paymentBuilder_ == null) {
+        paymentBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.github.diegogomesaraujo.store.grpc.Payment, com.github.diegogomesaraujo.store.grpc.Payment.Builder, com.github.diegogomesaraujo.store.grpc.PaymentOrBuilder>(
+                getPayment(),
+                getParentForChildren(),
+                isClean());
+        payment_ = null;
+      }
+      return paymentBuilder_;
+    }
+
     private java.util.List<com.github.diegogomesaraujo.store.grpc.ProductRPC> products_ =
       java.util.Collections.emptyList();
     private void ensureProductsIsMutable() {
-      if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+      if (!((bitField0_ & 0x00000002) == 0x00000002)) {
         products_ = new java.util.ArrayList<com.github.diegogomesaraujo.store.grpc.ProductRPC>(products_);
-        bitField0_ |= 0x00000001;
+        bitField0_ |= 0x00000002;
        }
     }
 
@@ -478,7 +662,7 @@ private static final long serialVersionUID = 0L;
         com.github.diegogomesaraujo.store.grpc.ProductRPC, com.github.diegogomesaraujo.store.grpc.ProductRPC.Builder, com.github.diegogomesaraujo.store.grpc.ProductRPCOrBuilder> productsBuilder_;
 
     /**
-     * <code>repeated .com.github.diegogomesaraujo.store.grpc.ProductRPC products = 1;</code>
+     * <code>repeated .com.github.diegogomesaraujo.store.grpc.ProductRPC products = 3;</code>
      */
     public java.util.List<com.github.diegogomesaraujo.store.grpc.ProductRPC> getProductsList() {
       if (productsBuilder_ == null) {
@@ -488,7 +672,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .com.github.diegogomesaraujo.store.grpc.ProductRPC products = 1;</code>
+     * <code>repeated .com.github.diegogomesaraujo.store.grpc.ProductRPC products = 3;</code>
      */
     public int getProductsCount() {
       if (productsBuilder_ == null) {
@@ -498,7 +682,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .com.github.diegogomesaraujo.store.grpc.ProductRPC products = 1;</code>
+     * <code>repeated .com.github.diegogomesaraujo.store.grpc.ProductRPC products = 3;</code>
      */
     public com.github.diegogomesaraujo.store.grpc.ProductRPC getProducts(int index) {
       if (productsBuilder_ == null) {
@@ -508,7 +692,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .com.github.diegogomesaraujo.store.grpc.ProductRPC products = 1;</code>
+     * <code>repeated .com.github.diegogomesaraujo.store.grpc.ProductRPC products = 3;</code>
      */
     public Builder setProducts(
         int index, com.github.diegogomesaraujo.store.grpc.ProductRPC value) {
@@ -525,7 +709,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .com.github.diegogomesaraujo.store.grpc.ProductRPC products = 1;</code>
+     * <code>repeated .com.github.diegogomesaraujo.store.grpc.ProductRPC products = 3;</code>
      */
     public Builder setProducts(
         int index, com.github.diegogomesaraujo.store.grpc.ProductRPC.Builder builderForValue) {
@@ -539,7 +723,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .com.github.diegogomesaraujo.store.grpc.ProductRPC products = 1;</code>
+     * <code>repeated .com.github.diegogomesaraujo.store.grpc.ProductRPC products = 3;</code>
      */
     public Builder addProducts(com.github.diegogomesaraujo.store.grpc.ProductRPC value) {
       if (productsBuilder_ == null) {
@@ -555,7 +739,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .com.github.diegogomesaraujo.store.grpc.ProductRPC products = 1;</code>
+     * <code>repeated .com.github.diegogomesaraujo.store.grpc.ProductRPC products = 3;</code>
      */
     public Builder addProducts(
         int index, com.github.diegogomesaraujo.store.grpc.ProductRPC value) {
@@ -572,7 +756,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .com.github.diegogomesaraujo.store.grpc.ProductRPC products = 1;</code>
+     * <code>repeated .com.github.diegogomesaraujo.store.grpc.ProductRPC products = 3;</code>
      */
     public Builder addProducts(
         com.github.diegogomesaraujo.store.grpc.ProductRPC.Builder builderForValue) {
@@ -586,7 +770,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .com.github.diegogomesaraujo.store.grpc.ProductRPC products = 1;</code>
+     * <code>repeated .com.github.diegogomesaraujo.store.grpc.ProductRPC products = 3;</code>
      */
     public Builder addProducts(
         int index, com.github.diegogomesaraujo.store.grpc.ProductRPC.Builder builderForValue) {
@@ -600,7 +784,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .com.github.diegogomesaraujo.store.grpc.ProductRPC products = 1;</code>
+     * <code>repeated .com.github.diegogomesaraujo.store.grpc.ProductRPC products = 3;</code>
      */
     public Builder addAllProducts(
         java.lang.Iterable<? extends com.github.diegogomesaraujo.store.grpc.ProductRPC> values) {
@@ -615,12 +799,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .com.github.diegogomesaraujo.store.grpc.ProductRPC products = 1;</code>
+     * <code>repeated .com.github.diegogomesaraujo.store.grpc.ProductRPC products = 3;</code>
      */
     public Builder clearProducts() {
       if (productsBuilder_ == null) {
         products_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
       } else {
         productsBuilder_.clear();
@@ -628,7 +812,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .com.github.diegogomesaraujo.store.grpc.ProductRPC products = 1;</code>
+     * <code>repeated .com.github.diegogomesaraujo.store.grpc.ProductRPC products = 3;</code>
      */
     public Builder removeProducts(int index) {
       if (productsBuilder_ == null) {
@@ -641,14 +825,14 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .com.github.diegogomesaraujo.store.grpc.ProductRPC products = 1;</code>
+     * <code>repeated .com.github.diegogomesaraujo.store.grpc.ProductRPC products = 3;</code>
      */
     public com.github.diegogomesaraujo.store.grpc.ProductRPC.Builder getProductsBuilder(
         int index) {
       return getProductsFieldBuilder().getBuilder(index);
     }
     /**
-     * <code>repeated .com.github.diegogomesaraujo.store.grpc.ProductRPC products = 1;</code>
+     * <code>repeated .com.github.diegogomesaraujo.store.grpc.ProductRPC products = 3;</code>
      */
     public com.github.diegogomesaraujo.store.grpc.ProductRPCOrBuilder getProductsOrBuilder(
         int index) {
@@ -658,7 +842,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .com.github.diegogomesaraujo.store.grpc.ProductRPC products = 1;</code>
+     * <code>repeated .com.github.diegogomesaraujo.store.grpc.ProductRPC products = 3;</code>
      */
     public java.util.List<? extends com.github.diegogomesaraujo.store.grpc.ProductRPCOrBuilder> 
          getProductsOrBuilderList() {
@@ -669,14 +853,14 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .com.github.diegogomesaraujo.store.grpc.ProductRPC products = 1;</code>
+     * <code>repeated .com.github.diegogomesaraujo.store.grpc.ProductRPC products = 3;</code>
      */
     public com.github.diegogomesaraujo.store.grpc.ProductRPC.Builder addProductsBuilder() {
       return getProductsFieldBuilder().addBuilder(
           com.github.diegogomesaraujo.store.grpc.ProductRPC.getDefaultInstance());
     }
     /**
-     * <code>repeated .com.github.diegogomesaraujo.store.grpc.ProductRPC products = 1;</code>
+     * <code>repeated .com.github.diegogomesaraujo.store.grpc.ProductRPC products = 3;</code>
      */
     public com.github.diegogomesaraujo.store.grpc.ProductRPC.Builder addProductsBuilder(
         int index) {
@@ -684,7 +868,7 @@ private static final long serialVersionUID = 0L;
           index, com.github.diegogomesaraujo.store.grpc.ProductRPC.getDefaultInstance());
     }
     /**
-     * <code>repeated .com.github.diegogomesaraujo.store.grpc.ProductRPC products = 1;</code>
+     * <code>repeated .com.github.diegogomesaraujo.store.grpc.ProductRPC products = 3;</code>
      */
     public java.util.List<com.github.diegogomesaraujo.store.grpc.ProductRPC.Builder> 
          getProductsBuilderList() {
@@ -697,7 +881,7 @@ private static final long serialVersionUID = 0L;
         productsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.github.diegogomesaraujo.store.grpc.ProductRPC, com.github.diegogomesaraujo.store.grpc.ProductRPC.Builder, com.github.diegogomesaraujo.store.grpc.ProductRPCOrBuilder>(
                 products_,
-                ((bitField0_ & 0x00000001) == 0x00000001),
+                ((bitField0_ & 0x00000002) == 0x00000002),
                 getParentForChildren(),
                 isClean());
         products_ = null;
@@ -717,41 +901,41 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:com.github.diegogomesaraujo.store.grpc.CartRPC)
+    // @@protoc_insertion_point(builder_scope:com.github.diegogomesaraujo.store.grpc.PaymentRequest)
   }
 
-  // @@protoc_insertion_point(class_scope:com.github.diegogomesaraujo.store.grpc.CartRPC)
-  private static final com.github.diegogomesaraujo.store.grpc.CartRPC DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:com.github.diegogomesaraujo.store.grpc.PaymentRequest)
+  private static final com.github.diegogomesaraujo.store.grpc.PaymentRequest DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.github.diegogomesaraujo.store.grpc.CartRPC();
+    DEFAULT_INSTANCE = new com.github.diegogomesaraujo.store.grpc.PaymentRequest();
   }
 
-  public static com.github.diegogomesaraujo.store.grpc.CartRPC getDefaultInstance() {
+  public static com.github.diegogomesaraujo.store.grpc.PaymentRequest getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<CartRPC>
-      PARSER = new com.google.protobuf.AbstractParser<CartRPC>() {
+  private static final com.google.protobuf.Parser<PaymentRequest>
+      PARSER = new com.google.protobuf.AbstractParser<PaymentRequest>() {
     @java.lang.Override
-    public CartRPC parsePartialFrom(
+    public PaymentRequest parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new CartRPC(input, extensionRegistry);
+      return new PaymentRequest(input, extensionRegistry);
     }
   };
 
-  public static com.google.protobuf.Parser<CartRPC> parser() {
+  public static com.google.protobuf.Parser<PaymentRequest> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<CartRPC> getParserForType() {
+  public com.google.protobuf.Parser<PaymentRequest> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.github.diegogomesaraujo.store.grpc.CartRPC getDefaultInstanceForType() {
+  public com.github.diegogomesaraujo.store.grpc.PaymentRequest getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

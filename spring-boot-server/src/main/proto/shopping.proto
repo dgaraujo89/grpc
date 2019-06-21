@@ -5,9 +5,19 @@ option java_multiple_files = true;
 option java_outer_classname = "Store";
 option optimize_for = SPEED;
 
-import "google/protobuf/empty.proto";
-
 package com.github.diegogomesaraujo.store.grpc;
+
+enum PaymentType {
+	CREDIT = 0;
+	DEBIT = 1;
+}
+
+message Payment {
+	PaymentType type = 1;
+	string number = 2;
+	string expirationDate = 3;
+	string verificationCode = 4;
+}
 
 message ProductRPC {
     string id = 1;
@@ -16,36 +26,31 @@ message ProductRPC {
     string price = 4;
 }
 
-message CartRPC {
-    repeated ProductRPC products = 1;
+message PaymentRequest {
+	Payment payment = 2;
+	repeated ProductRPC products = 3;
 }
 
-// Requests
-message ProductRequestRPC {
+message PaginationRequest {
     int32 page = 1;
     int32 size = 2;
-    string id = 3;
 }
 
-// Responses
-message ProductResponseRPC {
+message ProductResponse {
     repeated ProductRPC products = 1;
 }
 
-message ResponseRPC {
-    string code = 1;
-    string message = 2;
+message MessageResponse {
+    string message = 1;
 }
 
 service ShoppingService {
-    rpc ListProducts(ProductRequestRPC) returns (ProductResponseRPC) {}
-    rpc AddToCart(stream ProductRPC) returns (CartRPC) {}
-    rpc RemoveFromCart(ProductRPC) returns (CartRPC) {}
-    rpc GetCart(google.protobuf.Empty) returns (CartRPC) {}
+    rpc ListProducts(PaginationRequest) returns (ProductResponse) {}
+    rpc Checkout(PaymentRequest) returns (MessageResponse) {}
 }
 
 service StoreService {
-	rpc CreateProduct(ProductRPC) returns (ResponseRPC) {}
-	rpc UpdateProduct(ProductRPC) returns (ResponseRPC) {}
-	rpc DeleteProduct(ProductRPC) returns (ResponseRPC) {}
+	rpc CreateProduct(ProductRPC) returns (MessageResponse) {}
+	rpc UpdateProduct(ProductRPC) returns (MessageResponse) {}
+	rpc DeleteProduct(ProductRPC) returns (MessageResponse) {}
 }
